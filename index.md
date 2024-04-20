@@ -8,7 +8,7 @@
 <!-- [TCP/IP&コマンドラインQuickリファレンス（配布版）](https://gihyo.jp/assets/pdf/book/2024/978-4-297-14132-5/TcpipCmdQuickReference.pdf)<br/>
 読者の方向けのQuickリファレンスです。具体的な使い方は本文を参照してください。-->
 
-## テスト環境
+## 学習用環境
 
 [Windows+VirtualBox+Ubuntu](howto/install-virtualbox.md)<br/>
 [WSL (Windows Subsystem for Linux)](howto/install-wsl.md)<br/>

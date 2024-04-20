@@ -11,6 +11,7 @@
 ## テスト環境
 
 [Windows+VirtualBox+Ubuntu](howto/install-virtualbox.md)<br/>
+[WSL (Windows Subsystem for Linux)](howto/install-wsl.md)<br/>
 [macOS+UTM+Ubuntu](howto/install-utm.md)
 
 ## 正誤表

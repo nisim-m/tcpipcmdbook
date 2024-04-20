@@ -1,0 +1,19 @@
+---
+---
+
+@import "{{ site.theme }}";
+h1 {
+  font-size: 26px
+}
+body {
+  background-color: #f2f2f2;
+}
+
+a,a:hover,a:focus {
+  color: #8028B4;
+}
+
+hr {
+  background:#3DE0E3;
+  height:1px
+}

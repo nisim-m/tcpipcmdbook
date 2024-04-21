@@ -47,9 +47,9 @@ VirtualBoxのインストーラーを実行し、画面に従ってインスト�
 
 <small>*※<a href="https://nisim-m.github.io/linuxcmdbook/howto/images/2023-01-02-17-16-54.png">“Oracle VM VirtualBox 7.x.x needs the Microsoft Visual C++ 2019 Redistributable Packaging being installed first.”のようなメッセージ</a>が表示された場合、Microsoftのサイトからダウンロードしてインストールしてください。（<a href="https://visualstudio.microsoft.com/ja/downloads/">https://visualstudio.microsoft.com/ja/downloads/</a> “Microsoft Visual C++ Redistributable for Visual Studio 2022” <a href="https://nisim-m.github.io/linuxcmdbook/howto/install-vcpp.html">画面例）</a>*</small>
 
-画面例（Windows環境の状態やVirtualBoxのバージョンによって異なる画面が表示される可能性があります）：
-
+<div class="imgtitle">VirtualBoxのインストール（Windows環境の状態やVirtualBoxのバージョンによって異なる画面が表示される可能性があります）</div>
 <a href="images/2024-04-21-01-33-01.png"><img src="images/2024-04-21-01-33-01.png" width="300"/></a>
+
 
 <a href="images/2024-04-21-01-34-25.png"><img src="images/2024-04-21-01-34-25.png" width="300"/></a>
 

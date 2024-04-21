@@ -14,16 +14,15 @@
       2. [メモリーサイズ、ハードディスクサイズ](#メモリーサイズハードディスクサイズ)
    4. [ゲストOS（Ubuntu）のインストール](#ゲストosubuntuのインストール)
       1. [インストール時の設定](#インストール時の設定)
-      2. [再起動](#再起動)
-      3. [再起動後の設定](#再起動後の設定)
+      2. [再起動後の設定](#再起動後の設定)
          1. [Ubuntuデスクトップ](#ubuntuデスクトップ)
          2. [端末アプリ](#端末アプリ)
-      4. [Guest Additionsのインストール](#guest-additionsのインストール)
+      3. [Guest Additionsのインストール](#guest-additionsのインストール)
          1. [解像度の変更](#解像度の変更)
          2. [クリップボードの共有](#クリップボードの共有)
-      5. [Ubuntuの設定](#ubuntuの設定)
-      6. [ネットワークが切断されてしまった場合](#ネットワークが切断されてしまった場合)
-      7. [スナップショットの活用](#スナップショットの活用)
+      4. [Ubuntuの設定](#ubuntuの設定)
+      5. [ネットワークが切断されてしまった場合](#ネットワークが切断されてしまった場合)
+      6. [スナップショットの活用](#スナップショットの活用)
 
 <!-- /TOC -->
 
@@ -34,13 +33,13 @@
 [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 **VirtualBox xx.xx.xx platform packages**にOS別のダウンロードリンクがあるので、Windows Hostsをクリックしてインストーラーをダウンロードしてください。本書では7.0.12を使用しています。
 
-![VirtualBox Downloadページ](2024-04-20-23-48-17.png)
+![VirtualBox Downloadページ](images/2024-04-20-23-48-17.png)
 
 ### UbunutuのISOイメージ
 
 インストール用のイメージファイルは [https://jp.ubuntu.com/download](https://jp.ubuntu.com/download) からダウンロードできます。本書では、Ubuntu Desktop 22.04.3 LTS（`ubuntu-22.04.3-desktop-amd64.iso`）を使用しています。
 
-![Ubuntu Downloadページ](2024-04-20-23-58-05.png)
+![Ubuntu Downloadページ](images/2024-04-20-23-58-05.png)
 
 ## VirtualBoxのインストール
 
@@ -50,23 +49,23 @@ VirtualBoxのインストーラーを実行し、画面に従ってインスト�
 
 画面例（Windows環境の状態やVirtualBoxのバージョンによって異なる画面が表示される可能性があります）：
 
-![VirtualBoxインストール画面](images/2024-04-21-01-33-01.png)
+<a href="images/2024-04-21-01-33-01.png"><img src="images/2024-04-21-01-33-01.png" width="300"/></a>
 
-![VirtualBoxインストール画面](images/2024-04-21-01-34-25.png)
+<a href="images/2024-04-21-01-34-25.png"><img src="images/2024-04-21-01-34-25.png" width="300"/></a>
 
-![VirtualBoxインストール画面](images/2024-04-21-01-35-02.png)
+<a href="images/2024-04-21-01-35-02.png"><img src="images/2024-04-21-01-35-02.png" width="300"/></a>
 
-![VirtualBoxインストール画面](images/2024-04-21-01-35-41.png)
+<a href="images/2024-04-21-01-35-41.png"><img src="images/2024-04-21-01-35-41.png" width="300"/></a>
 
-![VirtualBoxインストール画面](images/2024-04-21-01-36-13.png)
+<a href="images/2024-04-21-01-36-13.png"><img src="images/2024-04-21-01-36-13.png" width="300"/></a>
 
-![VirtualBoxインストール画面](images/2024-04-21-01-38-01.png)
+<a href="images/2024-04-21-01-38-01.png"><img src="images/2024-04-21-01-38-01.png" width="300"/></a>
 
 ## 仮想マシンの作成
 
 VirtualBoxを実行し、仮想マシン(M)→新規(N)で仮想マシンを作成、ゲストOS（Ubuntu）をインストールします。
 
-![](images/2024-04-21-01-48-24.png)
+<a href="images/2024-04-21-01-48-24.png"><img src="images/2024-04-21-01-48-24.png" width="300"/></a>
 
 ### 名前とオペレーティングシステムの選択
 
@@ -79,7 +78,7 @@ VirtualBoxを実行し、仮想マシン(M)→新規(N)で仮想マシンを作�
 
 <small>*※VirtualBoxのバージョンによっては「Skip Unattended Installation」と表示されます。この場合もチェックマークを入れてください。*</small>
 
-![](images/2024-04-21-01-54-04.png)
+<a href="images/2024-04-21-01-54-04.png"><img src="images/2024-04-21-01-54-04.png" width="300"/></a>
 
 
 ### メモリーサイズ、ハードディスクサイズ
@@ -89,168 +88,167 @@ VirtualBoxを実行し、仮想マシン(M)→新規(N)で仮想マシンを作�
 ゲストOSに割り当てるメモリーのサイズは、たくさん割り当てることでゲストOSが快適に動作するようになりますが、その分、ホストOSの動作が犠牲になります。
 本書のネットワークコマンドを試すだけであれば、1024～2048MB程度で問題ありません。ハードディスクのサイズも25GBで問題ありませんが、本書で紹介している以外のソフトウェアも試してみたいという場合はもう少し大きくしておく方が扱いやすいでしょう。ディスクスペースは仮想OS側で使用した分だけが消費されます。
 
-![](images/2024-04-21-01-55-06.png)
+<a href="images/2024-04-21-01-55-06.png"><img src="images/2024-04-21-01-55-06.png" width="300"/></a>
 
-![](images/2024-04-21-02-04-43.png)
+<a href="images/2024-04-21-02-04-43.png"><img src="images/2024-04-21-02-04-43.png" width="300"/></a>
 
-![](images/2024-04-21-02-09-49.png)
+<a href="images/2024-04-21-02-09-49.png"><img src="images/2024-04-21-02-09-49.png" width="300"/></a>
 
 ## ゲストOS（Ubuntu）のインストール
 
 「起動」をクリックすると、仮想マシンの作成時に選択たISOイメージからUbuntuが起動するので、画面に従ってインストールを行います。
 
-起動をクリック
-![](images/2024-04-21-02-13-42.png)
+<div class="imgtitle">起動をクリック</div>
+<a href="images/2024-04-21-02-13-42.png"><img src="images/2024-04-21-02-13-42.png" width="300"/></a>
 
-![](images/2024-04-21-02-23-32.png)
+<a href="images/2024-04-21-02-23-32.png"><img src="images/2024-04-21-02-23-32.png" width="300"/></a>
 
-![](images/2024-04-21-02-37-52.png)
+<a href="images/2024-04-21-02-37-52.png"><img src="images/2024-04-21-02-37-52.png" width="300"/></a>
 
-起動メニューが表示（Try or Install Ubuntuが選択された状態になっている）
-![](images/2024-04-21-02-45-34.png)
+<div class="imgtitle">起動メニューが表示（Try or Install Ubuntuが選択された状態になっている）</div>
+<a href="images/2024-04-21-02-45-34.png"><img src="images/2024-04-21-02-45-34.png" width="400"/></a>
 
-画面をクリックすると「キャプチャー」についての説明が表示される
-![](images/2024-04-21-02-44-37.png)
+<div class="imgtitle">画面をクリックすると「キャプチャー」についての説明が表示される</div>
+<a href="images/2024-04-21-02-44-37.png"><img src="images/2024-04-21-02-44-37.png"/></a>
 
-「Try or Install Ubuntu」を選択した状態でEnter
-![](images/2024-04-21-02-38-55.png)
+<small>ゲストOSの画面をクリックすると、キー操作やマウス入力をゲストOSが受け取る状態（キャプチャーされた状態）となります。ホストOS側を操作したい場合は、右側のCtrlキーを押します。このキーを**ホストキー**と言い、VirtualBoxの右下にも表示されています。</small>
 
-Ubuntuが起動する
-![](images/2024-04-21-02-43-13.png)
+<div class="imgtitle">「Try or Install Ubuntu」を選択した状態で<kbd>Enter</kbd></div>
+<a href="images/2024-04-21-02-38-55.png"><img src="images/2024-04-21-02-38-55.png" width="400"/></a>
 
-Welcomeメニューが表示されたら左側の言語一覧をスクロール
-![](images/2024-04-21-02-51-46.png)
+<div class="imgtitle">Ubuntuが起動する</div>
+<a href="images/2024-04-21-02-43-13.png"><img src="images/2024-04-21-02-43-13.png" width="400"/></a>
 
-日本語を選択して「Ubuntuをインストール」をクリック
-![](images/2024-04-21-02-52-41.png)
+<div class="imgtitle">Welcomeメニューが表示されたら左側の言語一覧をスクロール</div>
+<a href="images/2024-04-21-02-51-46.png"><img src="images/2024-04-21-02-51-46.png" width="400"/></a>
+
+<div class="imgtitle">日本語を選択して「Ubuntuをインストール」をクリック</div>
+<a href="images/2024-04-21-02-52-41.png"><img src="images/2024-04-21-02-52-41.png" width="400"/></a>
 
 ### インストール時の設定
 
 画面に従ってインストールを進めます。「続ける」というボタンは画面の右下に表示されています。 
 <small>*※ボタンが画面上に表示されない場合はAlt+F7でスクロール（<a href="https://nisim-m.github.io/linuxcmdbook/howto/altf7.html">画面例</a>）*</small>
 
-キーボードを選択して「続ける」をクリック
-![](images/2024-04-21-02-57-04.png)
+<div class="imgtitle">キーボードを選択して「続ける」をクリック</div>
+<a href="images/2024-04-21-02-57-04.png"><img src="images/2024-04-21-02-57-04.png" width="400"/></a>
 
-「通常のインストール」のまま「続ける」をクリック
-![](images/2024-04-21-02-59-45.png)
+<div class="imgtitle">「通常のインストール」のまま「続ける」をクリック</div>
+<a href="images/2024-04-21-02-59-45.png"><img src="images/2024-04-21-02-59-45.png" width="400"/></a>
 <small>*※本書の学習範囲の場合「最小インストール」でも問題ありません。アプリケーションはインストール後に適宜追加可能です。*</small>
 
-「ディスクを削除してUbuntuをインストール」のまま「インストール」をクリック
-![](images/2024-04-21-03-03-56.png)
+<div class="imgtitle">「ディスクを削除してUbuntuをインストール」のまま「インストール」をクリック</div>
+<a href="images/2024-04-21-03-03-56.png"><img src="images/2024-04-21-03-03-56.png" width="400"/></a>
 <small>*ここで言う「ディスクを削除」とは仮想ディスクのことで、実環境には影響しません。*</small>
 
-「ディスクに変更を書き込みますか？」というメッセージが表示されるので「続ける」をクリック
-![](images/2024-04-21-03-07-34.png)
+<div class="imgtitle">「ディスクに変更を書き込みますか？」というメッセージが表示されるので「続ける」をクリック</div>
+<a href="images/2024-04-21-03-07-34.png"><img src="images/2024-04-21-03-07-34.png" width="400"/></a>
 
-地域を選択して「続ける」をクリック
-![](images/2024-04-21-03-10-25.png)
+<div class="imgtitle">地域を選択して「続ける」をクリック</div>
+<a href="images/2024-04-21-03-10-25.png"><img src="images/2024-04-21-03-10-25.png" width="400"/></a>
 
-ユーザー名、コンピューター名、パスワードを入力して「続ける」をクリック
-![](images/2024-04-21-03-20-22.png)
+<div class="imgtitle">ユーザー名、コンピューター名、パスワードを入力して「続ける」をクリック</div>
+<a href="images/2024-04-21-03-20-22.png"><img src="images/2024-04-21-03-20-22.png" width="400"/></a>
 
-（インストール中）
-![](images/2024-04-21-03-22-29.png)
+<div class="imgtitle">（インストール中）</div>
+<a href="images/2024-04-21-03-22-29.png"><img src="images/2024-04-21-03-22-29.png" width="400"/></a>
 
-### 再起動
+<div class="imgtitle">再起動を促すメッセージが表示されるので、「今すぐ再起動する」をクリック</div>
+<a href="images/2024-04-21-03-37-49.png"><img src="images/2024-04-21-03-37-49.png" width="400"/></a>
 
-再起動を促すメッセージが表示されるので、「今すぐ再起動する」をクリック
-
-![](images/2024-04-21-03-37-49.png)
-
-（"Please remove the installation medium, then press ENTER:"と表示されている場合は画面をクリックしてEnterを押す）
-![](images/2024-04-21-03-42-22.png)
+<div class="imgtitle">（"Please remove the installation medium, then press ENTER:"と表示されている場合は画面をクリックしてEnterを押す）</div>
+<a href="images/2024-04-21-03-42-22.png"><img src="images/2024-04-21-03-42-22.png" width="400"/></a>
 
 ### 再起動後の設定
 
 再起動するとGUI画面が表示されるのでインストールを完了させます。
 
-ユーザーを選択してパスワードを入力
-![](images/2024-04-21-03-45-54.png)
+<div class="imgtitle">ユーザーを選択してパスワードを入力</div>
+<a href="images/2024-04-21-03-45-54.png"><img src="images/2024-04-21-03-45-54.png" width="400"/></a>
 
-![](images/2024-04-21-03-46-25.png)
+<a href="images/2024-04-21-03-46-25.png"><img src="images/2024-04-21-03-46-25.png" width="400"/></a>
 
-オンラインアカウントへの接続（任意）※学習用の環境なので接続は不要
-![](images/2024-04-21-03-47-16.png)
+<div class="imgtitle">オンラインアカウントへの接続（任意）※学習用の環境なので接続は不要</div>
+<a href="images/2024-04-21-03-47-16.png"><img src="images/2024-04-21-03-47-16.png" width="400"/></a>
 
-Ubuntu Proの有効化（任意）※学習用の環境なので不要
-![](images/2024-04-21-03-48-11.png)
+<div class="imgtitle">Ubuntu Proの有効化（任意）※学習用の環境なので不要</div>
+<a href="images/2024-04-21-03-48-11.png"><img src="images/2024-04-21-03-48-11.png" width="400"/></a>
 
-エラーリポートの送信（任意）
-![](images/2024-04-21-03-49-28.png)
+<div class="imgtitle">エラーリポートの送信（任意）</div>
+<a href="images/2024-04-21-03-49-28.png"><img src="images/2024-04-21-03-49-28.png" width="400"/></a>
 
-位置情報サービスの設定（任意）
-![](images/2024-04-21-03-54-51.png)
+<div class="imgtitle">位置情報サービスの設定（任意）</div>
+<a href="images/2024-04-21-03-54-51.png"><img src="images/2024-04-21-03-54-51.png" width="400"/></a>
 
-完了
-![](images/2024-04-21-03-55-38.png)
+<div class="imgtitle">完了</div>
+<a href="images/2024-04-21-03-55-38.png"><img src="images/2024-04-21-03-55-38.png" width="400"/></a>
 
-![](images/2024-04-21-03-56-36.png)
+<a href="images/2024-04-21-03-56-36.png"><img src="images/2024-04-21-03-56-36.png" width="400"/></a>
 
 ※セットアップ中に「ソフトウェアの更新」が入った場合は「あとで再起動」として、セットアップを完了させてください。
 
-![](images/2024-04-21-03-51-07.png)
+<a href="images/2024-04-21-03-51-07.png"><img src="images/2024-04-21-03-51-07.png" width="400"/></a>
 
-![](images/2024-04-21-03-51-57.png)
+<a href="images/2024-04-21-03-51-57.png"><img src="images/2024-04-21-03-51-57.png" width="400"/></a>
 
-![](images/2024-04-21-03-53-45.png)
+<a href="images/2024-04-21-03-53-45.png"><img src="images/2024-04-21-03-53-45.png" width="400"/></a>
 
 
 #### Ubuntuデスクトップ
 
 Ubuntuデスクトップは以下の様な画面構成になっています。
 
-![](images/2024-04-21-10-37-42.png)
+<a href="images/2024-04-21-10-37-42.png"><img src="images/2024-04-21-10-37-42.png" width="400"/></a>
 
 #### 端末アプリ
 
 コマンドは「端末」アプリケーションで入力して実行します。アプリはdockに登録できます。
 
-![](images/2024-04-21-10-30-13.png)
+<a href="images/2024-04-21-10-30-13.png"><img src="images/2024-04-21-10-30-13.png" width="400"/></a>
 
 ### Guest Additionsのインストール
 
 「Guest Additions」をインストールすると、ホストOSと端末の間でのコピー&ペーストが可能になります。
 
-「デバイス」→「Guest Additions CDイメージの挿入」を選択
-![](images/2024-04-21-10-45-41.png)
+<div class="imgtitle">「デバイス」→「Guest Additions CDイメージの挿入」を選択</div>
+<a href="images/2024-04-21-10-45-41.png"><img src="images/2024-04-21-10-45-41.png" width="400"/></a>
 
-「autorun\.sh」を右クリック→「プログラムとして実行」
-![](images/2024-04-21-10-51-44.png)
+<div class="imgtitle">「autorun\.sh」を右クリック→「プログラムとして実行」</div>
+<a href="images/2024-04-21-10-51-44.png"><img src="images/2024-04-21-10-51-44.png" width="400"/></a>
 
-ゲストOSインストール時に設定したパスワードを入力
-![](images/2024-04-21-10-53-16.png)
+<div class="imgtitle">ゲストOSインストール時に設定したパスワードを入力</div>
+<a href="images/2024-04-21-10-53-16.png"><img src="images/2024-04-21-10-53-16.png" width="400"/></a>
 
 
 <small>このメッセージが表示されない場合、autorun.shが実行できていない可能性があります。端末で `sudo /media/ユーザー名/VBox_GAs_バージョン /VBoxLinuxAdditions.run` を実行してください。
 `sudoスペース/me`<kbd>Tab</kbd>`ユーザー名/V`<kbd>Tab</kbd>`VBoxL`<kbd>Tab</kbd><kbd>Enter</kbd>で実行できます（コマンド補完：本文参照）。</small>
 
-（autorun.sh実行中）
-![](images/2024-04-21-10-59-47.png)
+<div class="imgtitle">（autorun.sh実行中）</div>
+<a href="images/2024-04-21-10-59-47.png"><img src="images/2024-04-21-10-59-47.png" width="400"/></a>
 
-途中で解像度が変わり、「Press Return to close this window...」と表示されたらEnterキーを押して終了
-![](images/2024-04-21-11-00-13.png)
+<div class="imgtitle">途中で解像度が変わり、「Press Return to close this window...」と表示されたら<kbd>Enterキー</kbd>を押して終了</div>
+<a href="images/2024-04-21-11-00-13.png"><img src="images/2024-04-21-11-00-13.png" width="250"/></a>
 
-CD（仮想ディスク）を取り出して再起動
-![](images/2024-04-21-11-05-01.png)
+<div class="imgtitle">CD（仮想ディスク）を取り出して再起動</div>
+<a href="images/2024-04-21-11-05-01.png"><img src="images/2024-04-21-11-05-01.png" width="250"/></a>
 
-![](images/2024-04-21-11-06-45.png)
+<a href="images/2024-04-21-11-06-45.png"><img src="images/2024-04-21-11-06-45.png" width="250"/></a>
 
-![](images/2024-04-21-11-09-27.png)
+<a href="images/2024-04-21-11-09-27.png"><img src="images/2024-04-21-11-09-27.png" width="250"/></a>
 
 #### 解像度の変更
 解像度は再起動後「設定」から変更できます。
 
-「設定」をクリック
-![](images/2024-04-21-11-13-05.png)
+<div class="imgtitle">「設定」をクリック</div>
+<a href="images/2024-04-21-11-13-05.png"><img src="images/2024-04-21-11-13-05.png" width="250"/></a>
 
-スクロールして「ディスプレイ」を探し、クリックして「解像度」を変更
-![](images/2024-04-21-11-18-41.png)
+<div class="imgtitle">スクロールして「ディスプレイ」を探し、クリックして「解像度」を変更</div>
+<a href="images/2024-04-21-11-18-41.png"><img src="images/2024-04-21-11-18-41.png" width="250"/></a>
 
-「適用」で保存
-![](images/2024-04-21-11-21-22.png)
+<div class="imgtitle">「適用」で保存</div>
+<a href="images/2024-04-21-11-21-22.png"><img src="images/2024-04-21-11-21-22.png" width="250"/></a>
 
-![](images/2024-04-21-11-23-24.png)
+<a href="images/2024-04-21-11-23-24.png"><img src="images/2024-04-21-11-23-24.png" width="400"/></a>
 
 <small>※解像度はVirtualBoxの「表示」メニューや、ウィンドウサイズの変更でも調整可能</small>
 
@@ -258,14 +256,14 @@ CD（仮想ディスク）を取り出して再起動
 
 「Guest Additions」をインストールしてUbuntuを再起動し、「デバイス」→「クリップボードの共有」を有効にすることで、ホストOSと端末の間でのコピー&ペーストが可能になります。
 
-デバイス→クリップボードの共有で設定
-![](images/2024-04-21-11-28-31.png)
+<div class="imgtitle">デバイス→クリップボードの共有で設定</div>
+<a href="images/2024-04-21-11-28-31.png"><img src="images/2024-04-21-11-28-31.png" width="400"/></a>
 
 ### Ubuntuの設定
 
 学習の性質上、画面を見ているが操作はしない、という時間が長くなりがちです。デフォルトでは操作していないと5分で画面がオフになりますが、この時間は「電源管理」の「省電力オプション」で設定できます。
 
-![](images/2024-04-21-11-24-41.png)
+<a href="images/2024-04-21-11-24-41.png"><img src="images/2024-04-21-11-24-41.png" width="400"/></a>
 
 デスクトップの設定は「Ubuntuソフトウェア」の「Extension Manager」でもカスタマイズできます（例：Hide ClockエクステンションでTopパネルのカレンダーを非表示にする、等）。
 
@@ -275,7 +273,7 @@ VirtualBoxのUbuntuを起動したままホストOSがスリープ状態にな�
 
 VirtualBoxの「デバイス」メニューで「ネットワーク」の「ネットワークアダプターを接続」をクリックしていったん切断し、再度、「ネットワークアダプターを接続」をクリックして接続し直してください。
 
-![](images/2024-04-21-12-05-06.png)
+<a href="images/2024-04-21-12-05-06.png"><img src="images/2024-04-21-12-05-06.png"/></a>
 
 Ubuntuの再起動でも元の状態に戻ります。よくわからない時はいったん再起動してみてください。
 

@@ -10,13 +10,13 @@
 
 ## 学習用環境
 
-[Windows+VirtualBox+Ubuntu](howto/install-virtualbox.md)
-　[Clone(Part1用)](howto/clone1-virtualbox.md)
-　[Clone(Part2用、ネットワークを追加する)](howto/clone2-virtualbox.md)
-[macOS+UTM+Ubuntu](howto/install-utm.md)
-　[Clone(Part1用)](howto/clone1-utm.md)
-　[Clone(Part2用、ネットワークを追加する)](howto/clone2-utm.md)
-[WSL (Windows Subsystem for Linux)](howto/install-wsl.md)
+[Windows+VirtualBox+Ubuntu](howto/install-virtualbox.md)<br/>
+　[Clone(Part1用)](howto/clone1-virtualbox.md)<br/>
+　[Clone(Part2用、ネットワークを追加する)](howto/clone2-virtualbox.md)<br/>
+[macOS+UTM+Ubuntu](howto/install-utm.md)<br/>
+　[Clone(Part1用)](howto/clone1-utm.md)<br/>
+　[Clone(Part2用、ネットワークを追加する)](howto/clone2-utm.md)<br/>
+[WSL (Windows Subsystem for Linux)](howto/install-wsl.md)<br/>
 
 ## 正誤表
 

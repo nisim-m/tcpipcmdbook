@@ -21,11 +21,14 @@
 <!--
 　[Clone(Part1用)](howto/clone1-utm.md)<br/>
 　[Clone(Part2用、ネットワークを追加する)](howto/clone2-utm.md)<br/>
-[WSL (Windows Subsystem for Linux)](howto/install-wsl.md)<br/>
 -->
 　Clone(Part1用)<br/>
 　Clone(Part2用、ネットワークを追加する)<br/>
-WSL (Windows Subsystem for Linux)<br/>
+[WSL (Windows Subsystem for Linux)](howto/install-wsl.md)<br/>
+
+### 補足事項
+
+HTTP/3に対応したcurlコマンドの構築（➡p.221 curlによるHTTD/3通信 ）
 
 ## 正誤表
 

@@ -1,4 +1,4 @@
-
+<div class="imgtitle"></div><div class="imgtitle"></div>
 [TCP/IP＆ネットワークコマンド入門 サポートページ](https://nisim-m.github.io/tcpipcmdbook/) ～学習用環境～
 # クローンの作成
 
@@ -28,17 +28,17 @@ VirtualBoxの「NAT」はゲストOSからホストOS、ゲストOSからイン�
 
 VirtualBoxマネージャーの「ツール」→「ネットワーク」の「NATネットワーク」タブでデバイスを作成します。
 
-「ファイル」→「ツール」→「ネットワークマネージャー」
-![](images/2024-04-28-00-19-12.png)
+<div class="imgtitle">「ファイル」→「ツール」→「ネットワークマネージャー」</div>
+<a href="images/2024-04-28-00-19-12.png"><img src="images/2024-04-28-00-19-12.png" width="300"/></a>
 
-※ネットワークマネージャーは「ツール」→「ネットワーク」からも開く事が可能
-[](images/2024-04-28-00-16-14.png)
+<div class="imgtitle">※ネットワークマネージャーは「ツール」→「ネットワーク」からも開く事が可能</div>
+<a href="images/2024-04-28-00-16-14.png"><img src="images/2024-04-28-00-16-14.png" width="300"/></a>
 
-「NAT Networks」タブで「作成」をクリック
-![](images/2024-04-28-00-20-49.png)
+<div class="imgtitle">「NAT Networks」タブで「作成」をクリック</div>
+<a href="images/2024-04-28-00-20-49.png"><img src="images/2024-04-28-00-20-49.png" width="300"/></a>
 
-（NatNetworkが作成された）
-![](images/2024-04-28-00-22-00.png)
+<div class="imgtitle">（NatNetworkが作成された）</div>
+<a href="images/2024-04-28-00-22-00.png"><img src="images/2024-04-28-00-22-00.png" width="300"/></a>
 
 ### IPv6を有効にする
 
@@ -48,8 +48,8 @@ IPv6のネットワークアドレス（ネットワークプレフィックス�
 
 <code>fd17:625c:f037:2::/64</code>
 
-作成された仮想デバイス「NatNetwork」の「プロパティ」で以下を設定し、「適用」をクリック
-![](images/2024-04-28-00-35-26.png)
+<div class="imgtitle">作成された仮想デバイス「NatNetwork」の「プロパティ」で以下を設定し、「適用」をクリック</div>
+<a href="images/2024-04-28-00-35-26.png"><img src="images/2024-04-28-00-35-26.png" width="300"/></a>
 
 設定内容は以下のとおりです：
 名前（任意、変更不要）：`NatNetwork`
@@ -67,17 +67,17 @@ IPv6デフォルトルートのアドバタイズ: `✓`有効
 
 仮想マシン（1台目）の「設定」→「ネットワーク」でアダプターを「NATネットワーク」に変更し、上で作成したアダプター（NatNetwork）を割り当てます。
 
-仮想マシンを選択して「設定」をクリック
-![](images/2024-04-28-00-41-59.png)
+<div class="imgtitle">仮想マシンを選択して「設定」をクリック</div>
+<a href="images/2024-04-28-00-41-59.png"><img src="images/2024-04-28-00-41-59.png" width="300"/></a>
 
-設定画面が開く
-![](images/2024-04-28-00-42-26.png)
+<div class="imgtitle">設定画面が開く</div>
+<a href="images/2024-04-28-00-42-26.png"><img src="images/2024-04-28-00-42-26.png" width="300"/></a>
 
-「ネットワーク」で「アダプター1」の割り当てを「NATネットワーク」にする
-![](images/2024-04-28-00-44-12.png)
+<div class="imgtitle">「ネットワーク」で「アダプター1」の割り当てを「NATネットワーク」にする</div>
+<a href="images/2024-04-28-00-44-12.png"><img src="images/2024-04-28-00-44-12.png" width="300"/></a>
 
-「名前」で「NatNetwork」を選択して「OK」をクリック
-![](images/2024-04-28-00-45-23.png)
+<div class="imgtitle">「名前」で「NatNetwork」を選択して「OK」をクリック</div>
+<a href="images/2024-04-28-00-45-23.png"><img src="images/2024-04-28-00-45-23.png" width="300"/></a>
 
 ## クローンを作成する
 
@@ -85,25 +85,24 @@ IPv6デフォルトルートのアドバタイズ: `✓`有効
 
 ここでは、2台目の仮想マシンを「Ubuntu 2」として作成しています。また、MACアドレスのポリシーで「すべてのネットワークアダプターでMACアドレスを生成」を選択してください。
 
-仮想マシン（1台目）を選択した状態で「仮想マシン」→「クローン」
-![](images/2024-04-28-00-51-47.png)
+<div class="imgtitle">仮想マシン（1台目）を選択した状態で「仮想マシン」→「クローン」</div>
+<a href="images/2024-04-28-00-51-47.png"><img src="images/2024-04-28-00-51-47.png" width="300"/></a>
 
-名前を変更（Ubuntu 2、任意）してMACアドレスのポリシーで「すべてのネットワークアダプターでMACアドレスを生成」を選択する
-![](images/2024-04-28-00-54-59.png)
+<div class="imgtitle">名前を変更（Ubuntu 2、任意）してMACアドレスのポリシーで「すべてのネットワークアダプターでMACアドレスを生成」を選択する</div>
+<a href="images/2024-04-28-00-54-59.png"><img src="images/2024-04-28-00-54-59.png" width="300"/></a>
 
 <small>※クローンで作成した仮想マシンは元の仮想マシンと異なるMACアドレス（➡1.1 ネットワークデバイスとMACアドレス）にするため新しいMACアドレスを生成するよう設定しています。<br />この設定を忘れた場合、クローンで作成した仮想マシンの「設定」→「ネットワーク」のアダプター1で「高度」を選択し、MACアドレスの右側にある丸い矢印ボタンをクリックして新しいMACアドレスを生成してください。なお、MACアドレスを変更するには仮想マシンを電源オフの状態にしておく必要があります。</small>
 
-「OK」をクリック
-![](images/2024-04-28-01-03-04.png)
+<div class="imgtitle">「OK」をクリック</div>
+<a href="images/2024-04-28-01-03-04.png"><img src="images/2024-04-28-01-03-04.png" width="300"/></a>
 
-「リンクしたクローン」を選択して「完了」をクリック
-![](images/2024-04-28-01-03-09.png)
+<div class="imgtitle">「リンクしたクローン」を選択して「完了」をクリック</div>
+<a href="images/2024-04-28-01-03-09.png"><img src="images/2024-04-28-01-03-09.png" width="300"/></a>
 
 クローンの作成は、仮想マシンのファイルをコピーして作成する「すべてをクローン」と、クローン元のファイルを利用する「リンクしたクローン」の2種類がありますが、今回の目的の場合「リンクしたクローン」で問題ありません。これはスナップショット（仮想マシンの状態を保存する機能、参考→<a href="linuxcmdbook/howto/install-ubuntu.html#スナップショットの活用"スナップショットの活用</a>）のように、新しいマシンが作成元のファイルからの差分という形で作成されるのでディスクスペースの節約となります。
 
-2台目の仮想マシン（Ubuntu 2）が作成できた
-![](images/2024-04-28-01-07-52.png)
-
+<div class="imgtitle">2台目の仮想マシン（Ubuntu 2）が作成できた</div>
+<a href="images/2024-04-28-01-07-52.png"><img src="images/2024-04-28-01-07-52.png" width="300"/></a>
 
 ## ホスト名を変更する
 
@@ -112,6 +111,12 @@ IPv6デフォルトルートのアドバタイズ: `✓`有効
 <code>sudo hostnamectl set-hostname ubuntu2</code>
 
 なお、プロンプト（本文参照）は端末を開き直すことで反映されます。
+
+<div class="imgtitle">クローンで作成した仮想マシン（Ubuntu 2）を起動して端末で`sudo hostnamectl set-hostname ubuntu2`を実行</div>
+<a href="images/2024-04-28-07-51-16.png"><img src="images/2024-04-28-07-51-16.png" width="400"/></a>
+
+<div class="imgtitle">プロンプトに表示されているホスト名は端末を開き直すと反映される</div>
+<a href="images/2024-04-28-07-54-25.png"><img src="images/2024-04-28-07-54-25.png" width="400"/></a>
 
 ----
 [TCP/IP＆ネットワークコマンド入門 サポートページ](https://nisim-m.github.io/tcpipcmdbook/)

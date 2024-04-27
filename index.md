@@ -10,10 +10,9 @@
 
 ## 学習用環境
 
-[Windows+VirtualBox+Ubuntu](howto/install-virtualbox.md)<br/><!--
-　[Clone(Part1用、仮想マシンを追加して通信を試す)](howto/clone1-virtualbox.md)<br/>
+[Windows+VirtualBox+Ubuntu](howto/install-virtualbox.md)<br/>
+　[Clone(Part1用、仮想マシンを追加して通信を試す)](howto/clone1-virtualbox.md)<br/><!--
 　[Clone(Part2用、ネットワークを追加する)](howto/clone2-virtualbox.md)<br/>-->
-　Clone(Part1用) <br/>
 　Clone(Part2用、ネットワークを追加する) <br/>
 [macOS+UTM+Ubuntu](howto/install-utm.md)<br/><!--
 　[Clone(Part1用、仮想マシンを追加して通信を試す)](howto/clone1-utm.md)<br/>

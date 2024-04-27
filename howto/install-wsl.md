@@ -3,11 +3,10 @@
 
 <!-- TOC -->
 
-1. [WSL (Windows Subsystem for Linux)](#wsl-windows-subsystem-for-linux)
-   1. [Windows機能の有効化](#windows機能の有効化)
-   2. [Ubuntuのインストール](#ubuntuのインストール)
-      1. [WSLの終了](#wslの終了)
-      2. [WSLを使用するには](#wslを使用するには)
+1. [Windows機能の有効化](#windows機能の有効化)
+2. [Ubuntuのインストール](#ubuntuのインストール)
+   1. [WSLの終了](#wslの終了)
+   2. [WSLを使用するには](#wslを使用するには)
 
 <!-- /TOC -->
 

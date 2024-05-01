@@ -15,7 +15,7 @@
 　[Clone (Part2用、ネットワークを追加する)](howto/clone2-virtualbox.md)<br/>
 [macOS+UTM+Ubuntuのインストール](howto/install-utm.md)<br/>
 　[Clone (Part1用、仮想マシンを追加して通信を試す)](howto/clone1-utm.md)<br/>
-　<!--[Clone(Part2用、ネットワークを追加する)](howto/clone2-utm.md)-->Clone(Part2用、ネットワークを追加する)<br/>
+　[Clone (Part2用、ネットワークを追加する)](howto/clone2-utm.md)<br/>
 [WSL (Windows Subsystem for Linux) のインストール](howto/install-wsl.md)
 
 ### 補足事項

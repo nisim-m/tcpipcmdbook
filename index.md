@@ -10,17 +10,20 @@
 
 ## 学習用環境
 
-[Windows+VirtualBox+Ubuntuのインストール](howto/install-virtualbox.md)<br/>
+**Windows環境：**
+[VirtualBox+Ubuntuのインストール](howto/install-virtualbox.md)<br/>
 　[Clone (Part1用、仮想マシンを追加して通信を試す)](howto/clone1-virtualbox.md)<br/>
 　[Clone (Part2用、ネットワークを追加する)](howto/clone2-virtualbox.md)<br/>
+[WSL (Windows Subsystem for Linux) のインストール](howto/install-wsl.md)
+
+**macOS環境：**
 [macOS+UTM+Ubuntuのインストール](howto/install-utm.md)<br/>
 　[Clone (Part1用、仮想マシンを追加して通信を試す)](howto/clone1-utm.md)<br/>
 　[Clone (Part2用、ネットワークを追加する)](howto/clone2-utm.md)<br/>
-[WSL (Windows Subsystem for Linux) のインストール](howto/install-wsl.md)
 
 ### 補足事項
 
-HTTP/3に対応したcurlコマンドの構築（➡p.221 curlによるHTTD/3通信 ）
+HTTP/3に対応したcurlコマンドの構築（➡p.221 curlによるHTTP/3通信 ）
 
 ## 正誤表
 

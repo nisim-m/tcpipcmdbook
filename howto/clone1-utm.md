@@ -20,14 +20,14 @@ Part1では2つの仮想マシンどうしで通信を行います。UTMの「�
 
 <small>※UTMの場合、DHCP割り当て開始アドレス（ここでは10.0.2.1）がルーター兼DHCPサーバー（➡p.114 DHCPによる自動割り当て参照）のアドレスになる。</small>
 
-右上の「設定」をクリック
-![](images/img1714577595.png)
+<div class="imgtitle">右上の「設定」をクリック</div>
+<a href="images/img1714577595.png"><img src="images/img1714577595.png" width="300"/></a>
 
-「ネットワーク」で「詳細設定を表示」をクリック
-![](images/img1714579643.png)
+<div class="imgtitle">「ネットワーク」で「詳細設定を表示」をクリック</div>
+<a href="images/img1714579643.png"><img src="images/img1714579643.png" width="300"/></a>
 
-ネットワークアドレスを変更して「保存」
-![](images/img1714577754.png)
+<div class="imgtitle">ネットワークアドレスを変更して「保存」</div>
+<a href="images/img1714577754.png"><img src="images/img1714577754.png" width="300"/></a>
 
 ゲストネットワーク： `10.0.2.0/24`
 DHCP割り当て開始アドレス： `10.0.2.1`
@@ -39,24 +39,24 @@ DHCP割り当て終了アドレス： `10.0.2.254`
 
 UTMの「複製」はAPFSファイルシステムのクローン機能が使用されており、複製は一瞬で終わり、ディスクの使用量も増えません。クローンされたファイルに対してなされた変更は、差分データとして保存されるようになっています（コピーオンライト、_Copy-on-Write_）。
 
-仮想マシンを選択して複製をクリック
-![](images/img1714577842.png)
+<div class="imgtitle">仮想マシンを選択して複製をクリック</div>
+<a href="images/img1714577842.png"><img src="images/img1714577842.png" width="300"/></a>
 
-「すべて複製しますか？」の確認メッセージが出るので「はい」で複製
-![](images/img1714577891.png)
+<div class="imgtitle">「すべて複製しますか？」の確認メッセージが出るので「はい」で複製</div>
+<a href="images/img1714577891.png"><img src="images/img1714577891.png" width="300"/></a>
 
 ## 複製した仮想マシンのMACアドレスを変更する
 
 MACアドレスの重複を避けるため、複製した仮想マシンのMACアドレスを変更します。
 
-複製した仮想マシンを選択して設定をクリック
-![](images/img1714578010.png)
+<div class="imgtitle">複製した仮想マシンを選択して設定をクリック</div>
+<a href="images/img1714578010.png"><img src="images/img1714578010.png" width="300"/></a>
 
-名前を適宜変更する（ここではUbuntu 2）
-![](images/img1714578094.png)
+<div class="imgtitle">名前を適宜変更する（ここではUbuntu 2）</div>
+<a href="images/img1714578094.png"><img src="images/img1714578094.png" width="300"/></a>
 
-「ネットワーク」で「ランダム」をクリックしてMACアドレスを変更
-![](images/img1714578359.png)
+<div class="imgtitle">「ネットワーク」で「ランダム」をクリックしてMACアドレスを変更</div>
+<a href="images/img1714578359.png"><img src="images/img1714578359.png" width="300"/></a>
 
 ## ホスト名を変更する
 

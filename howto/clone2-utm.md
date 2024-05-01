@@ -15,17 +15,17 @@
 1台目の仮想マシンにネットワークデバイスを追加します。
 設定変更に先立ちシャットダウンしておいてください。
 
-1台目の仮想マシンを選択して右上の設定をクリック
-![](images/img1714580731.png)
+<div class="imgtitle">1台目の仮想マシンを選択して右上の設定をクリック</div>
+<a href="images/img1714580731.png"><img src="images/img1714580731.png" width="300"/></a>
 
-「＋」で「ネットワーク」を選択
-![](images/img1714580933.png)
+<div class="imgtitle">「＋」で「ネットワーク」を選択</div>
+<a href="images/img1714580933.png"><img src="images/img1714580933.png" width="300"/></a>
 
-ネットワークが追加されるのでクリックして詳細設定を表示
-![](images/img1714582109.png)
+<div class="imgtitle">ネットワークが追加されるのでクリックして詳細設定を表示</div>
+<a href="images/img1714582109.png"><img src="images/img1714582109.png" width="300"/></a>
 
-ゲストネットワークを設定して「保存」をクリック
-![](images/img1714581773.png)
+<div class="imgtitle">ゲストネットワークを設定して「保存」をクリック</div>
+<a href="images/img1714581773.png"><img src="images/img1714581773.png" width="300"/></a>
 
 ここでは以下を設定しています。これまで使用してきたネットワークとは異なるネットワークアドレスであれば値は任意です。
 
@@ -38,10 +38,11 @@ DHCP割り当て終了アドレス： `10.0.3.254`
 
 1台目の仮想マシンを選択して複製します。
 
-![](images/img1714583143.png)
+<div class="imgtitle">仮想マシンを選択して複製をクリック</div>
+<a href="images/img1714583143.png"><img src="images/img1714583143.png" width="300"/></a>
 
-![](images/img1714583235.png)
-
+<div class="imgtitle">「すべて複製しますか？」の確認メッセージが出るので「はい」で複製</div>
+<a href="images/img1714583235.png"><img src="images/img1714583235.png" width="300"/></a>
 
 ## 新しい仮想マシン（3台目の仮想マシン）の設定
 
@@ -49,21 +50,20 @@ DHCP割り当て終了アドレス： `10.0.3.254`
 
 3台目の仮想マシンから`10.0.2.0/24`のネットワークを削除し、`10.0.3.0/24`のMACアドレスを変更します。
 
+<div class="imgtitle">複製した仮想マシンを選択して設定をクリック</div>
+<a href="images/img1714583315.png"><img src="images/img1714583315.png" width="300"/></a>
 
-複製した仮想マシンを選択して設定をクリック
-![](images/img1714583315.png)
+<div class="imgtitle">名前を適宜変更する（ここではUbuntu 3）</div>
+<a href="images/img1714583383.png"><img src="images/img1714583383.png" width="300"/></a>
 
-名前を適宜変更する（ここではUbuntu 3）
-![](images/img1714583383.png)
+<div class="imgtitle">1つめのネットワーク（10.0.2.0/24）を削除</div>
+<a href="images/img1714583548.png"><img src="images/img1714583548.png" width="300"/></a>
 
-1つめのネットワーク（10.0.2.0/24）を削除
-![](images/img1714583548.png)
+<div class="imgtitle">（削除できた）</div>
+<a href="images/img1714583575.png"><img src="images/img1714583575.png" width="300"/></a>
 
-（削除できた）
-![](images/img1714583575.png)
-
-「ネットワーク」で「ランダム」をクリックしてMACアドレスを変更
-![](images/img1714583695.png)
+<div class="imgtitle">「ネットワーク」で「ランダム」をクリックしてMACアドレスを変更</div>
+<a href="images/img1714583695.png"><img src="images/img1714583695.png" width="300"/></a>
 
 ### ホスト名の変更
 

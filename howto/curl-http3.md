@@ -33,7 +33,7 @@ wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshar
 ~~~
 
 ~~~console
-echo "console"
+$ echo "console"
 $ ping www.example.com
 PING www.example.com (93.184.216.34) 56(84) bytes of data.
 64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=1 ttl=53 time=110 ms

@@ -25,7 +25,7 @@
 - `<somewhere1>`は `/opt/curl` とする
 - 作業フォルダを作成し、その中でソースを取得して構築、今回はホームディレクトリ下にworkというディレクトリを作成して使用
 
-<div class="imgtitle">実行コマンド（curl用のディレクトリを作成、ホームディレクトリに移動してworkディレクトリを作成しworkディレクトリに移動）</div>
+<div class="codetitle">実行コマンド（curl用のディレクトリを作成、ホームディレクトリに移動してworkディレクトリを作成しworkディレクトリに移動）</div>
 ~~~
 sudo mkdir /opt/curl
 cd
@@ -33,7 +33,8 @@ mkdir work
 cd work
 ~~~
 
-~~~console:実行画面サンプル
+<div class="codetitle">実行画面サンプル</div>
+~~~console
 $ sudo mkdir /opt/curl
 [sudo] study のパスワード:	#パスワードを入力
 $ cd            #ホームディレクトリに移動
@@ -61,12 +62,12 @@ $ cd work       #workディレクトリに移る
 - [https://github.com/ngtcp2/ngtcp2](https://github.com/ngtcp2/ngtcp2)「pkg-config、autoconf、automake、autotools-dev、libtool」
 - [https://github.com/curl/curl](https://github.com/curl/curl)
 
-実行コマンド
+<div class="codetitle">実行コマンド</div>
 ~~~
 sudo apt install gcc make pkg-config autoconf automake autotools-dev libtool
 ~~~
 
-（実行画面サンプル）
+<div class="codetitle">実行画面サンプル</div>
 ~~~console
 $ sudo apt install gcc make pkg-config autoconf automake autotools-dev libtool
 [sudo] study のパスワード:  #パスワードを入力してEnter

@@ -251,7 +251,8 @@ make[2]: 'install-exec-am' に対して行うべき事はありません.
  /usr/bin/install -c -m 644 README.rst '/opt/curl/share/doc/nghttp2'
 make[2]: ディレクトリ '/home/study/work/nghttp2' から出ます
 make[1]: ディレクトリ '/home/study/work/nghttp2' から出ます
-~/work/nghttp2$ 
+~/work/nghttp2$ cd ..
+~/work$
 ~~~
 
 ## nghttp3の取得と構築
@@ -271,8 +272,86 @@ sudo make install
 cd ..
 ~~~
 
-<div class="codetitle">実行画面サンプル</div>
+<div class="codetitle">実行画面サンプル（ホームディレクトリ下のworkで実行）</div>
 ~~~console
+~/work$ git clone --depth 1 https://github.com/ngtcp2/nghttp3
+Cloning into 'nghttp3'...
+remote: Enumerating objects: 154, done.
+remote: Counting objects: 100% (154/154), done.
+remote: Compressing objects: 100% (144/144), done.
+remote: Total 154 (delta 48), reused 57 (delta 3), pack-reused 0
+Receiving objects: 100% (154/154), 225.00 KiB | 2.74 MiB/s, done.
+Resolving deltas: 100% (48/48), done.
+~/work$              （nghttp3ディレクトリが生成されている）
+~/work$ cd nghttp3/  （nghttp3ディレクトリへ移動する）
+~/work/nghttp3$ git submodule update --init  サブモジュールの取得と更新更新
+Submodule 'lib/sfparse' (https://github.com/ngtcp2/sfparse) registered for path 'lib/sfparse'
+Submodule 'tests/munit' (https://github.com/ngtcp2/munit) registered for path 'tests/munit'
+Cloning into '/home/study/work/nghttp3/lib/sfparse'...
+Cloning into '/home/study/work/nghttp3/tests/munit'...
+Submodule path 'lib/sfparse': checked out '6e1572691c66bb6c7e7c784330f0c676164fbdde'
+Submodule path 'tests/munit': checked out '7f53fea8901089d46233302b3af35bf8be93cfc5'
+~/work/nghttp3$ autoreconf -fi   （この後はいままでと同じ手順）
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+configure.ac:30: installing './compile'
+configure.ac:33: installing './config.guess'
+configure.ac:33: installing './config.sub'
+configure.ac:39: installing './install-sh'
+configure.ac:39: installing './missing'
+Makefile.am: installing './INSTALL'
+examples/Makefile.am: installing './depcomp'
+parallel-tests: installing './test-driver'
+~/work/nghttp3$ 
+~/work/nghttp3$ ./configure --enable-lib-only --prefix=/opt/curl
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+・・・
+    Library:
+      Shared:         yes
+      Static:         yes
+    Debug:
+      Debug:          no (CFLAGS='')
+    Library only:     yes
+    Examples:         no
+
+~/work/nghttp3$ make
+make  all-recursive
+make[1]: ディレクトリ '/home/study/work/nghttp3' に入ります
+Making all in lib
+make[2]: ディレクトリ '/home/study/work/nghttp3/lib' に入ります
+Making all in includes
+・・・
+Making all in examples
+make[2]: ディレクトリ '/home/study/work/nghttp3/examples' に入ります
+make[2]: 'all' に対して行うべき事はありません.
+make[2]: ディレクトリ '/home/study/work/nghttp3/examples' から出ます
+make[2]: ディレクトリ '/home/study/work/nghttp3' に入ります
+make[2]: ディレクトリ '/home/study/work/nghttp3' から出ます
+make[1]: ディレクトリ '/home/study/work/nghttp3' から出ます
+~/work/nghttp3$ 
+~/work/nghttp3$ sudo make install
+Making install in lib
+make[1]: ディレクトリ '/home/study/work/nghttp3/lib' に入ります
+Making install in includes
+make[2]: ディレクトリ '/home/study/work/nghttp3/lib/includes' に入ります
+make[3]: ディレクトリ '/home/study/work/nghttp3/lib/includes' に入ります
+make[3]: 'install-exec-am' に対して行うべき事はありません.
+・・・
+make[2]: 'install-exec-am' に対して行うべき事はありません.
+ /usr/bin/mkdir -p '/opt/curl/share/doc/nghttp3'
+ /usr/bin/install -c -m 644 README.rst '/opt/curl/share/doc/nghttp3'
+make[2]: ディレクトリ '/home/study/work/nghttp3' から出ます
+make[1]: ディレクトリ '/home/study/work/nghttp3' から出ます
+~/work/nghttp3$
 ~~~
 
 ## ngtcp2の取得と構築
@@ -288,7 +367,7 @@ sudo make install
 cd ..
 ~~~
 
-<div class="codetitle">実行画面サンプル</div>
+<div class="codetitle">実行画面サンプル（ホームディレクトリ下のworkで実行）</div>
 ~~~console
 ~~~
 
@@ -305,7 +384,7 @@ sudo make install
 cd ..
 ~~~
 
-<div class="codetitle">実行画面サンプル</div>
+<div class="codetitle">実行画面サンプル（ホームディレクトリ下のworkで実行）</div>
 ~~~console
 ~~~
 

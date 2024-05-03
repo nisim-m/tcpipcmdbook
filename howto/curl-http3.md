@@ -36,11 +36,11 @@ cd work
 <div class="codetitle">実行画面サンプル</div>
 ~~~console
 $ sudo mkdir /opt/curl
-[sudo] study のパスワード:	#パスワードを入力
-$ cd            #ホームディレクトリに移動
-$ mkdir work    #workディレクトリを作成
-$ cd work       #workディレクトリに移る
-~/work$         #プロンプトに~/workと表示されている、~はホームディレクトリを示す記号
+[sudo] study のパスワード:	←パスワードを入力
+$ cd            ←ホームディレクトリに移動
+$ mkdir work    ←workディレクトリを作成
+$ cd work       <span class="c">←workディレクトリに移る</span>
+~/work$         ←プロンプトに~/workと表示されている、~はホームディレクトリを示す記号
 ~~~
 
 ### git clone 実行時の方針

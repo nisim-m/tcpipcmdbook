@@ -14,7 +14,7 @@
 DHCP割り当て開始アドレス： `10.0.2.1`
 DHCP割り当て終了アドレス： `10.0.2.254`
 
-~~~cmd
+~~~bat
 ping www.example.com
 wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshark.exe" -ki - 2>NUL
 ~~~

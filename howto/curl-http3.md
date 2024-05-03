@@ -6,25 +6,14 @@
 
 <!-- /TOC -->
 
-<code>normal
-sudo hostnamectl set-hostname ubuntu2
-</code>
-
-<code class="b">black
-sudo hostnamectl set-hostname ubuntu2
-</code>
-
-<code class="g">gray
-sudo hostnamectl set-hostname ubuntu2
-</code>
-
-<code class="g1">g1
-sudo hostnamectl set-hostname ubuntu2
-</code>
-
-<code class="g2">g2
-sudo hostnamectl set-hostname ubuntu2
-</code>
+~~~
+$ ping www.example.com
+PING www.example.com (93.184.216.34) 56(84) bytes of data.
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=1 ttl=53 time=110 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=2 ttl=53 time=111 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=3 ttl=53 time=110 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=4 ttl=53 time=109 ms
+~~~
 
 
 ----

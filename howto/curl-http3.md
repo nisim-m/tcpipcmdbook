@@ -36,7 +36,7 @@ cd work
 <div class="codetitle">実行画面サンプル</div>
 ~~~console
 $ sudo mkdir /opt/curl
-[sudo] study のパスワード:	`←パスワードを入力`
+[sudo] study のパスワード:	👈パスワードを入力してEnter
 $ cd            ←ホームディレクトリに移動
 $ mkdir work    ←workディレクトリを作成
 $ cd work       ←workディレクトリに移る
@@ -70,7 +70,7 @@ sudo apt install gcc make pkg-config autoconf automake autotools-dev libtool
 <div class="codetitle">実行画面サンプル</div>
 ~~~console
 $ sudo apt install gcc make pkg-config autoconf automake autotools-dev libtool
-[sudo] study のパスワード:  `パスワードを入力してEnter`
+[sudo] study のパスワード:  👈パスワードを入力してEnter
 パッケージリストを読み込んでいます... 完了
 依存関係ツリーを作成しています... 完了        
 状態情報を読み取っています... 完了        
@@ -83,7 +83,7 @@ automake は手動でインストールしたと設定されました。
 アップグレード: 0 個、新規インストール: 4 個、削除: 0 個、保留: 0 個。
 499 kB のアーカイブを取得する必要があります。
 この操作後に追加で 3,090 kB のディスク容量が消費されます。
-続行しますか? [Y/n] y   yと入力してEnter
+続行しますか? [Y/n] y   👈yと入力してEnter
 取得:1 http://security.ubuntu.com/ubuntu jammy-security/main amd64 libdpkg-perl all 1.21.1ubuntu2.1 [237 kB]
 取得:2 http://jp.archive.ubuntu.com/ubuntu jammy/main amd64 libfile-fcntllock-perl amd64 0.22-3build7 [33.9 kB]
 取得:3 http://jp.archive.ubuntu.com/ubuntu jammy/main amd64 make amd64 4.3-4.1build1 [180 kB]
@@ -104,7 +104,7 @@ $
 OpenSSLにQUICプロトコルのサポートを追加したフォーク（fork、既存プロジェクトから分岐して作られたプロジェクト）
 <q>This is a fork of OpenSSL to enable QUIC.</q>
 
-実行コマンド（ソースコード入手、入手したディレクトリに移動、構築してインストール、workディレクトリに戻る）
+<div class="codetitle">実行コマンド（ソースコード入手、入手したディレクトリに移動、構築してインストール、workディレクトリに戻る）</div>
 ~~~
 git clone --depth 1 https://github.com/quictls/openssl
 cd openssl
@@ -114,13 +114,13 @@ sudo make install
 cd ..
 ~~~
 
-（実行画面サンプル）
+<div class="codetitle">実行画面サンプル</div>
 ~~~console
 ~~~
 
 ## nghttp2の取得と構築
 
-実行コマンド（ソースコード入手、入手したディレクトリに移動、構築してインストール、workディレクトリに戻る）
+<div class="codetitle">実行コマンド（ソースコード入手、入手したディレクトリに移動、構築してインストール、workディレクトリに戻る）</div>
 ~~~
 git clone --depth 1 https://github.com/nghttp2/nghttp2
 cd nghttp2
@@ -131,7 +131,7 @@ sudo make install
 cd ..
 ~~~
 
-（実行画面サンプル）
+<div class="codetitle">実行画面サンプル</div>
 ~~~console
 ~~~
 
@@ -140,7 +140,7 @@ cd ..
 取得したnghttp3ディレクトリの中で`git submodule update --init`を実行してから構築している点に注意。
 `git submodule update --init`はサブモジュールの更新と初期化を行うコマンド。
 
-実行コマンド（ソースコード入手、入手したディレクトリに移動、構築してインストール、workディレクトリに戻る）
+<div class="codetitle">実行コマンド（ソースコード入手、入手したディレクトリに移動、構築してインストール、workディレクトリに戻る</div>
 ~~~
 git clone --depth 1 https://github.com/ngtcp2/nghttp3
 cd nghttp3
@@ -152,13 +152,13 @@ sudo make install
 cd ..
 ~~~
 
-（実行画面サンプル）
+<div class="codetitle">実行画面サンプル</div>
 ~~~console
 ~~~
 
 ## ngtcp2の取得と構築
 
-実行コマンド（ソースコード入手、入手したディレクトリに移動、構築してインストール、workディレクトリに戻る）
+<div class="codetitle">実行コマンド（ソースコード入手、入手したディレクトリに移動、構築してインストール、workディレクトリに戻る）</div>
 ~~~
 git clone --depth 1 https://github.com/ngtcp2/ngtcp2
 cd ngtcp2
@@ -169,13 +169,13 @@ sudo make install
 cd ..
 ~~~
 
-（実行画面サンプル）
+<div class="codetitle">実行画面サンプル</div>
 ~~~console
 ~~~
 
 ## curlの取得と構築
 
-実行コマンド（ソースコード入手、入手したディレクトリに移動、構築してインストール、workディレクトリに戻る）
+<div class="codetitle">実行コマンド（ソースコード入手、入手したディレクトリに移動、構築してインストール、workディレクトリに戻る）</div>
 ~~~
 git clone --depth 1 https://github.com/curl/curl
 cd curl
@@ -186,7 +186,7 @@ sudo make install
 cd ..
 ~~~
 
-（実行画面サンプル）
+<div class="codetitle">実行画面サンプル</div>
 ~~~console
 ~~~
 

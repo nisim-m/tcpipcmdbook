@@ -637,7 +637,7 @@ $ curl --version     👈curlコマンドのバージョンを確認
 curl: symbol lookup error: curl: undefined symbol: curl_easy_header
 （参照エラーが起きている？！）
 $ ldd /usr/local/bin/curl | grep curl
-	libcurl.so.4 => /lib/x86_64-linux-gnu/libcurl.so.4 (0x000071c82024e000)
+	libcurl.so.4 ⇒ /lib/x86_64-linux-gnu/libcurl.so.4 (0x000071c82024e000)
 （今回作成した/usr/local/lib/libcurl.so.4とは異なるファイルを参照している？！）
 $ sudo apt remove libcurl4 👈libcurl4パッケージを削除
 パッケージリストを読み込んでいます... 完了
@@ -706,7 +706,7 @@ HTTP3が有効になっている場合は、--http3オプションが使用可�
 **※筆者が執筆時にWSL環境で構築した`curl 8.6.0-DEV`は`--HTTP1.1`、`--HTTP2`、`--HTTP3`のように大文字でも指定できましたが（小文字も使用可能）、
 今回仮想環境で再構築した`curl 8.8.0-DEV`は下記実行例のように小文字で指定する必要がありました。**
 
-~~~console
+~~~terminal
 $ curl -v --http3 https://www.example.com  👈HTTP/3で取得
 * Host www.example.com:443 was resolved.
 * IPv6: 2606:2800:21f:cb07:6820:80da:af6b:8b2c

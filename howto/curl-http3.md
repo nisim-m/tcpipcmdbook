@@ -145,18 +145,18 @@ Created include/openssl/configuration.h
 ***                                                                ***
 **********************************************************************
 ~/work/openssl$ make
-/usr/bin/perl "-I." -Mconfigdata "util/dofile.pl" "-oMakefile" include/crypto/bn_conf.h.in &gt; include/crypto/bn_conf.h
-/usr/bin/perl "-I." -Mconfigdata "util/dofile.pl" "-oMakefile" include/crypto/dso_conf.h.in &gt; include/crypto/dso_conf.h
+/usr/bin/perl "-I." -Mconfigdata "util/dofile.pl" "-oMakefile" include/crypto/bn_conf.h.in ・・・
+/usr/bin/perl "-I." -Mconfigdata "util/dofile.pl" "-oMakefile" include/crypto/dso_conf.h.in ・・・
 ・・・
 gcc  -I. -Iinclude -Iapps/include  -fPIC -pthread -m64 -Wa,--noexecstack -Wall -O3 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSLDIR="\"/opt/curl/ssl\"" -DENGINESDIR="\"/opt/curl/lib64/engines-81.3\"" -DMODULESDIR="\"/opt/curl/lib64/ossl-modules\"" -DOPENSSL_BUILDING_OPENSSL -DNDEBUG  -MMD -MF apps/lib/libapps-lib-app_libctx.d.tmp -MT apps/lib/libapps-lib-app_libctx.o -c -o apps/lib/libapps-lib-app_libctx.o apps/lib/app_libctx.c
 gcc  -I. -Iinclude -Iapps/include  -fPIC -pthread -m64 -Wa,--noexecstack -Wall -O3 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSLDIR="\"/opt/curl/ssl\"" -DENGINESDIR="\"/opt/curl/lib64/engines-81.3\"" -DMODULESDIR="\"/opt/curl/lib64/ossl-modules\"" -DOPENSSL_BUILDING_OPENSSL -DNDEBUG  -MMD -MF apps/lib/libapps-lib-app_params.d.tmp -MT apps/lib/libapps-lib-app_params.o -c -o apps/lib/libapps-lib-app_params.o apps/lib/app_params.c
 gcc  -I. -Iinclude -Iapps/include  -fPIC -pthread -m64 -Wa,--noexecstack -Wall -O3 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSLDIR="\"/opt/curl/ssl\"" -DENGINESDIR="\"/opt/curl/lib64/engines-81.3\"" -DMODULESDIR="\"/opt/curl/lib64/ossl-modules\"" -DOPENSSL_BUILDING_OPENSSL -DNDEBUG  -MMD -MF apps/lib/libapps-lib-app_provider.d.tmp -MT apps/lib/libapps-lib-app_provider.o -c -o apps/lib/libapps-lib-app_provider.o apps/lib/app_provider.c
 ・・・
 /usr/bin/perl "-I." -Mconfigdata "util/dofile.pl" \
-    "-oMakefile" util/wrap.pl.in \> "util/wrap.pl"
+    "-oMakefile" util/wrap.pl.in ・・・
 chmod a+x util/wrap.pl
 make[1]: Leaving directory '/home/study/work/openssl'
-~/work/openssl$ （"syntax error"や"fatal error"、"～はありません"などのエラーメッセージが出ていなければOK）
+~/work/openssl$ （エラーメッセージ、「syntax error」や「～はありません」等、が出ていなければOK）
 ~/work/openssl$ sudo make install
 [sudo] study のパスワード:  👈パスワードを入力してEnter
 make depend && make _build_libs
@@ -167,9 +167,9 @@ make[1]: Leaving directory '/home/study/work/openssl'
 created directory `/opt/curl/lib64'
 *** Installing runtime libraries
 ・・・
-install doc/html/man7/proxy-certificates.html -> /opt/curl/share/doc/openssl/html/man7/proxy-certificates.html
-install doc/html/man7/ssl.html -> /opt/curl/share/doc/openssl/html/man7/ssl.html
-install doc/html/man7/x509.html -> /opt/curl/share/doc/openssl/html/man7/x509.html
+install doc/html/man7/proxy-certificates.html ・・・
+install doc/html/man7/ssl.html ・・・
+install doc/html/man7/x509.html ・・・
 ~/work/openssl$         （エラーメッセージが出ていなければOK）
 ~/work/openssl$ cd ..   （workディレクトリに戻る、「..」は親ディレクトリを表す記号）
 ~/work$

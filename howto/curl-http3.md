@@ -141,26 +141,19 @@ Created include/openssl/configuration.h
 ***                                                                ***
 ***   OpenSSL has been successfully configured                     ***
 ***                                                                ***
-***   If you encounter a problem while building, please open an    ***
-***   issue on GitHub <https://github.com/openssl/openssl/issues>  ***
-***   and include the output from the following command:           ***
-***                                                                ***
-***       perl configdata.pm --dump                                ***
-***                                                                ***
-***   (If you are new to OpenSSL, you might want to consult the    ***
-***   'Troubleshooting' section in the INSTALL.md file first)      ***
+・・・
 ***                                                                ***
 **********************************************************************
 ~/work/openssl$ make
-/usr/bin/perl "-I." -Mconfigdata "util/dofile.pl" "-oMakefile" include/crypto/bn_conf.h.in > include/crypto/bn_conf.h
-/usr/bin/perl "-I." -Mconfigdata "util/dofile.pl" "-oMakefile" include/crypto/dso_conf.h.in > include/crypto/dso_conf.h
+/usr/bin/perl "-I." -Mconfigdata "util/dofile.pl" "-oMakefile" include/crypto/bn_conf.h.in &gt; include/crypto/bn_conf.h
+/usr/bin/perl "-I." -Mconfigdata "util/dofile.pl" "-oMakefile" include/crypto/dso_conf.h.in &gt; include/crypto/dso_conf.h
 ・・・
 gcc  -I. -Iinclude -Iapps/include  -fPIC -pthread -m64 -Wa,--noexecstack -Wall -O3 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSLDIR="\"/opt/curl/ssl\"" -DENGINESDIR="\"/opt/curl/lib64/engines-81.3\"" -DMODULESDIR="\"/opt/curl/lib64/ossl-modules\"" -DOPENSSL_BUILDING_OPENSSL -DNDEBUG  -MMD -MF apps/lib/libapps-lib-app_libctx.d.tmp -MT apps/lib/libapps-lib-app_libctx.o -c -o apps/lib/libapps-lib-app_libctx.o apps/lib/app_libctx.c
 gcc  -I. -Iinclude -Iapps/include  -fPIC -pthread -m64 -Wa,--noexecstack -Wall -O3 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSLDIR="\"/opt/curl/ssl\"" -DENGINESDIR="\"/opt/curl/lib64/engines-81.3\"" -DMODULESDIR="\"/opt/curl/lib64/ossl-modules\"" -DOPENSSL_BUILDING_OPENSSL -DNDEBUG  -MMD -MF apps/lib/libapps-lib-app_params.d.tmp -MT apps/lib/libapps-lib-app_params.o -c -o apps/lib/libapps-lib-app_params.o apps/lib/app_params.c
 gcc  -I. -Iinclude -Iapps/include  -fPIC -pthread -m64 -Wa,--noexecstack -Wall -O3 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSLDIR="\"/opt/curl/ssl\"" -DENGINESDIR="\"/opt/curl/lib64/engines-81.3\"" -DMODULESDIR="\"/opt/curl/lib64/ossl-modules\"" -DOPENSSL_BUILDING_OPENSSL -DNDEBUG  -MMD -MF apps/lib/libapps-lib-app_provider.d.tmp -MT apps/lib/libapps-lib-app_provider.o -c -o apps/lib/libapps-lib-app_provider.o apps/lib/app_provider.c
 ・・・
 /usr/bin/perl "-I." -Mconfigdata "util/dofile.pl" \
-    "-oMakefile" util/wrap.pl.in > "util/wrap.pl"
+    "-oMakefile" util/wrap.pl.in \> "util/wrap.pl"
 chmod a+x util/wrap.pl
 make[1]: Leaving directory '/home/study/work/openssl'
 ~/work/openssl$ （"syntax error"や"fatal error"、"～はありません"などのエラーメッセージが出ていなければOK）

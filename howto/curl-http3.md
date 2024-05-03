@@ -15,16 +15,19 @@ DHCP割り当て開始アドレス： `10.0.2.1`
 DHCP割り当て終了アドレス： `10.0.2.254`
 
 ~~~bat
+echo "bat"
 ping www.example.com
 wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshark.exe" -ki - 2>NUL
 ~~~
 
 ~~~bash
+echo "bash"
 ping www.example.com
 wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshark.exe" -ki - 2>NUL
 ~~~
 
 ~~~console
+echo "console"
 $ ping www.example.com
 PING www.example.com (93.184.216.34) 56(84) bytes of data.
 64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=1 ttl=53 time=110 ms
@@ -35,6 +38,7 @@ PING www.example.com (93.184.216.34) 56(84) bytes of data.
 ~~~
 
 ~~~terminal
+echo "terminal"
 >ping www.example.com
 PING www.example.com (93.184.216.34) 56(84) bytes of data.
 64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=1 ttl=53 time=110 ms

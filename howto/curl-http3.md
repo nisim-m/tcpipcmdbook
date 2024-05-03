@@ -156,7 +156,7 @@ gcc  -I. -Iinclude -Iapps/include  -fPIC -pthread -m64 -Wa,--noexecstack -Wall -
     "-oMakefile" util/wrap.pl.in ・・・
 chmod a+x util/wrap.pl
 make[1]: Leaving directory '/home/study/work/openssl'
-~/work/openssl$ （エラーメッセージ、「syntax error」や「～はありません」等、が出ていなければOK）
+~/work/openssl$ エラーメッセージ（「syntax error」や「～はありません」等）が出ていなければOK
 ~/work/openssl$ sudo make install
 [sudo] study のパスワード:  👈パスワードを入力してEnter
 make depend && make _build_libs
@@ -188,8 +188,70 @@ sudo make install
 cd ..
 ~~~
 
-<div class="codetitle">実行画面サンプル</div>
+<div class="codetitle">実行画面サンプル（ホームディレクトリ下のworkで実行）</div>
 ~~~console
+~/work$ git clone --depth 1 https://github.com/nghttp2/nghttp2
+Cloning into 'nghttp2'...
+remote: Enumerating objects: 647, done.
+remote: Counting objects: 100% (647/647), done.
+remote: Compressing objects: 100% (561/561), done.
+remote: Total 647 (delta 161), reused 379 (delta 71), pack-reused 0
+Receiving objects: 100% (647/647), 1.20 MiB | 2.53 MiB/s, done.
+Resolving deltas: 100% (161/161), done.
+~/work$              （nghttp2ディレクトリが生成されている）
+~/work$ cd nghttp2/  （nghttp2ディレクトリへ移動）
+~/work/nghttp2$ autoreconf -fi
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+・・・
+configure.ac:41: installing './install-sh'
+configure.ac:41: installing './missing'
+Makefile.am: installing './INSTALL'
+examples/Makefile.am: installing './depcomp'
+parallel-tests: installing './test-driver'
+~/work/nghttp2$ ./configure --enable-lib-only --prefix=/opt/curl
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+・・・
+    Third-party:
+      http-parser:    no
+      MRuby:          no (CFLAGS='' LIBS='')
+      Neverbleed:     no
+    Features:
+      Applications:   no
+      HPACK tools:    no
+      Examples:       no
+      Threading:      no
+      HTTP/3 (EXPERIMENTAL): no
+
+~/work/nghttp2$ make
+make  all-recursive
+make[1]: ディレクトリ '/home/study/work/nghttp2' に入ります
+Making all in lib
+make[2]: ディレクトリ '/home/study/work/nghttp2/lib' に入ります
+Making all in includes
+・・・
+Making all in script
+make[2]: ディレクトリ '/home/study/work/nghttp2/script' に入ります
+make[2]: 'all' に対して行うべき事はありません.
+make[2]: ディレクトリ '/home/study/work/nghttp2/script' から出ます
+make[2]: ディレクトリ '/home/study/work/nghttp2' に入ります
+make[2]: ディレクトリ '/home/study/work/nghttp2' から出ます
+make[1]: ディレクトリ '/home/study/work/nghttp2' から出ます
+~/work/nghttp2$ sudo make install
+[sudo] study のパスワード: 
+Making install in lib
+make[1]: ディレクトリ '/home/study/work/nghttp2/lib' に入ります
+Making install in includes
+・・・
+make[2]: 'install-exec-am' に対して行うべき事はありません.
+ /usr/bin/mkdir -p '/opt/curl/share/doc/nghttp2'
+ /usr/bin/install -c -m 644 README.rst '/opt/curl/share/doc/nghttp2'
+make[2]: ディレクトリ '/home/study/work/nghttp2' から出ます
+make[1]: ディレクトリ '/home/study/work/nghttp2' から出ます
+~/work/nghttp2$ 
 ~~~
 
 ## nghttp3の取得と構築

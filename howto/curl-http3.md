@@ -6,19 +6,23 @@
 
 <!-- /TOC -->
 
-<code>
+<code>normal
 sudo hostnamectl set-hostname ubuntu2
 </code>
-<code class="b">
+
+<code class="b">black
 sudo hostnamectl set-hostname ubuntu2
 </code>
-<code class="g">
+
+<code class="g">gray
 sudo hostnamectl set-hostname ubuntu2
 </code>
-<code class="g1">
+
+<code class="g1">g1
 sudo hostnamectl set-hostname ubuntu2
 </code>
-<code class="g2">
+
+<code class="g2">g2
 sudo hostnamectl set-hostname ubuntu2
 </code>
 

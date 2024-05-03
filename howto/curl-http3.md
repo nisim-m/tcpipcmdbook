@@ -25,7 +25,7 @@
 - `<somewhere1>`は `/opt/curl` とする
 - 作業フォルダを作成し、その中でソースを取得して構築、今回はホームディレクトリ下にworkというディレクトリを作成して使用
 
-実行コマンド（curl用のディレクトリを作成、ホームディレクトリに移動してworkディレクトリを作成しworkディレクトリに移動）
+<div class="imgtitle">実行コマンド（curl用のディレクトリを作成、ホームディレクトリに移動してworkディレクトリを作成しworkディレクトリに移動）</div>
 ~~~
 sudo mkdir /opt/curl
 cd
@@ -33,8 +33,7 @@ mkdir work
 cd work
 ~~~
 
-（実行画面サンプル）
-~~~console
+~~~console:実行画面サンプル
 $ sudo mkdir /opt/curl
 [sudo] study のパスワード:	#パスワードを入力
 $ cd            #ホームディレクトリに移動

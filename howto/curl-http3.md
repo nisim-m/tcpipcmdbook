@@ -14,7 +14,8 @@
 5. [nghttp3の取得と構築](#nghttp3の取得と構築)
 6. [ngtcp2の取得と構築](#ngtcp2の取得と構築)
 7. [curlの取得と構築](#curlの取得と構築)
-   1. [作成したcurlコマンドの確認](#作成したcurlコマンドの確認)
+   1. [libcurl4のアンインストール](#libcurl4のアンインストール)
+   2. [作成したcurlコマンドの確認](#作成したcurlコマンドの確認)
 <!-- /TOC -->
 
 ## 概要と方針
@@ -23,7 +24,7 @@
 
 - ngtcp2版で構築
 - http2とhttp3を有効にしたい
-- `<somewhere1>`は `/opt/curl` とする
+- `<somewhere1～3>`は `/opt/curl` とする
 - 作業フォルダを作成し、その中でソースを取得して構築、今回はホームディレクトリ下にworkというディレクトリを作成して使用
 
 <div class="codetitle">実行コマンド（curl用のディレクトリを作成、ホームディレクトリに移動してworkディレクトリを作成しworkディレクトリに移動）</div>
@@ -466,12 +467,237 @@ cd ..
 
 <div class="codetitle">実行画面サンプル（ホームディレクトリ下のworkで実行）</div>
 ~~~console
+~/work$ git clone --depth 1 https://github.com/curl/curl
+Cloning into 'curl'...
+remote: Enumerating objects: 3961, done.
+remote: Counting objects: 100% (3961/3961), done.
+remote: Compressing objects: 100% (3304/3304), done.
+remote: Total 3961 (delta 1245), reused 1295 (delta 643), pack-reused 0
+Receiving objects: 100% (3961/3961), 4.42 MiB | 3.81 MiB/s, done.
+Resolving deltas: 100% (1245/1245), done.
+~/work$ cd curl/
+~/work/curl$ autoreconf -fi
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+libtoolize: Remember to add 'LT_INIT' to configure.ac.
+configure.ac:124: installing './compile'
+configure.ac:426: installing './config.guess'
+configure.ac:426: installing './config.sub'
+configure.ac:124: installing './install-sh'
+configure.ac:130: installing './missing'
+docs/examples/Makefile.am: installing './depcomp'
+~/work/curl$ 
+~/work/curl$ LDFLAGS="-Wl,-rpath,/opt/curl/lib64" ./configure --with-openssl=/opt/curl --with-nghttp2=/opt/curl --with-nghttp3=/opt/curl --with-ngtcp2=/opt/curl
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether make supports nested variables... yes
+checking whether to enable debug build options... no
+checking whether to enable compiler optimizer... (assumed) yes
+・・・
+
+configure: Configured to build curl/libcurl:
+
+  Host setup:       x86_64-pc-linux-gnu
+  Install prefix:   /usr/local
+  Compiler:         gcc
+   CFLAGS:          -Werror-implicit-function-declaration -O2 -Wno-system-headers
+   CPPFLAGS:        -isystem /opt/curl/include -isystem /opt/curl/include -isystem /opt/curl/include -isystem /opt/curl/include -isystem /opt/curl/include
+   LDFLAGS:         -Wl,-rpath,/opt/curl/lib64 -L/opt/curl/lib64 -L/opt/curl/lib -L/opt/curl/lib -L/opt/curl/lib -L/opt/curl/lib
+   LIBS:            -lnghttp3 -lngtcp2_crypto_quictls -lngtcp2 -lnghttp2 -lssl -lcrypto -lssl -lcrypto
+
+  curl version:     8.8.0-DEV
+  SSL:              enabled (OpenSSL v3+)
+  SSH:              no      (--with-{libssh,libssh2})
+  zlib:             no      (--with-zlib)
+  brotli:           no      (--with-brotli)
+  zstd:             no      (--with-zstd)
+  GSS-API:          no      (--with-gssapi)
+  GSASL:            no      (libgsasl not found)
+  TLS-SRP:          enabled
+  resolver:         POSIX threaded
+  IPv6:             enabled
+  Unix sockets:     enabled
+  IDN:              no      (--with-{libidn2,winidn})
+  Build docs:       enabled (--disable-docs)
+  Build libcurl:    Shared=yes, Static=yes
+  Built-in manual:  enabled
+  --libcurl option: enabled (--disable-libcurl-option)
+  Verbose errors:   enabled (--disable-verbose)
+  Code coverage:    disabled
+  SSPI:             no      (--enable-sspi)
+  ca cert bundle:   /etc/ssl/certs/ca-certificates.crt
+  ca cert path:     /etc/ssl/certs
+  ca fallback:      no
+  LDAP:             no      (--enable-ldap / --with-ldap-lib / --with-lber-lib)
+  LDAPS:            no      (--enable-ldaps)
+  RTSP:             enabled
+  RTMP:             no      (--with-librtmp)
+  PSL:              no      (--with-libpsl)
+  Alt-svc:          enabled (--disable-alt-svc)
+  Headers API:      enabled (--disable-headers-api)
+  HSTS:             enabled (--disable-hsts)
+  HTTP1:            enabled (internal)
+  HTTP2:            enabled (nghttp2)
+  HTTP3:            enabled (ngtcp2 + nghttp3)
+  ECH:              no      (--enable-ech)
+  WebSockets:       no      (--enable-websockets)
+  Protocols:        DICT FILE FTP FTPS GOPHER GOPHERS HTTP HTTPS IMAP IMAPS IPFS IPNS MQTT POP3 POP3S RTSP SMB SMBS SMTP SMTPS TELNET TFTP
+  Features:         AsynchDNS HSTS HTTP2 HTTP3 HTTPS-proxy IPv6 Largefile NTLM SSL TLS-SRP UnixSockets alt-svc threadsafe
+
+~/work/curl$
+~/work/curl$ make
+Making all in lib
+make[1]: ディレクトリ '/home/study/work/curl/lib' に入ります
+make  all-am
+make[2]: ディレクトリ '/home/study/work/curl/lib' に入ります
+  CC       libcurl_la-altsvc.lo
+  CC       libcurl_la-amigaos.lo
+  CC       libcurl_la-asyn-ares.lo
+  CC       libcurl_la-asyn-thread.lo
+  CC       libcurl_la-base64.lo
+・・・
+Making all in scripts
+make[1]: ディレクトリ '/home/study/work/curl/scripts' に入ります
+make[1]: 'all' に対して行うべき事はありません.
+make[1]: ディレクトリ '/home/study/work/curl/scripts' から出ます
+make[1]: ディレクトリ '/home/study/work/curl' に入ります
+make[1]: 'all-am' に対して行うべき事はありません.
+make[1]: ディレクトリ '/home/study/work/curl' から出ます
+~/work/curl$ 
+~/work/curl$ sudo make install
+[sudo] study のパスワード: 
+Making install in lib
+make[1]: ディレクトリ '/home/study/work/curl/lib' に入ります
+make[2]: ディレクトリ '/home/study/work/curl/lib' に入ります
+ /usr/bin/mkdir -p '/usr/local/lib'
+・・・
+make[6]: ディレクトリ '/home/study/work/curl/docs/libcurl' から出ます
+make[5]: ディレクトリ '/home/study/work/curl/docs/libcurl' から出ます
+make[4]: ディレクトリ '/home/study/work/curl/docs/libcurl' から出ます
+make[3]: ディレクトリ '/home/study/work/curl' から出ます
+make[2]: ディレクトリ '/home/study/work/curl' から出ます
+make[1]: ディレクトリ '/home/study/work/curl' から出ます
+study@ubuntu1:~/work/curl$ 
+study@ubuntu1:~/work/curl$ cd ..
+study@ubuntu1:~/work$ 
 ~~~
+
+### libcurl4のアンインストール
+
+別のバージョンのcurlがインストールされている場合、ライブラリ参照のエラーが出ることがあります。
+この場合は、libcurl4パッケージをアンインストールしてください。
+
+~~~
+sudo apt remove libcurl4
+~~~
+
+<div class="codetitle">確認している様子</div>
+~~~console
+$ which curl         👈curlコマンドの位置を確認（後述）
+/usr/local/bin/curl  
+$ curl --version     👈curlコマンドのバージョンを確認
+curl: symbol lookup error: curl: undefined symbol: curl_easy_header
+（参照エラーが起きている？！）
+$ ldd /usr/local/bin/curl | grep curl
+	libcurl.so.4 => /lib/x86_64-linux-gnu/libcurl.so.4 (0x000071c82024e000)
+（今回作成した/usr/local/lib/libcurl.so.4とは異なるファイルを参照している？！）
+$ sudo apt remove libcurl4 👈libcurl4パッケージを削除
+パッケージリストを読み込んでいます... 完了
+依存関係ツリーを作成しています... 完了        
+状態情報を読み取っています... 完了        
+以下のパッケージが自動でインストールされましたが、もう必要とされていません:　※
+・・・
+これを削除するには 'sudo apt autoremove' を利用してください。
+以下のパッケージは「削除」されます:
+  colord curl gnome-control-center gvfs-backends hplip libcurl4 libgphoto2-6 libsane1 sane-utils
+  shotwell simple-scan transmission-gtk ubuntu-desktop ubuntu-desktop-minimal
+アップグレード: 0 個、新規インストール: 0 個、削除: 14 個、保留: 0 個。
+この操作後に 35.0 MB のディスク容量が解放されます。
+続行しますか? [Y/n]  👈Enterで実行
+(データベースを読み込んでいます ... 現在 214259 個のファイルとディレクトリがインストールされていま
+す。)
+・・・
+$ curl --version  👈あらためてcurlコマンドのバージョンを確認
+curl 8.8.0-DEV (x86_64-pc-linux-gnu) libcurl/8.8.0-DEV quictls/3.1.5 nghttp2/1.62.0-DEV ngtcp2/1.5.0-DEV nghttp3/1.3.0-DEV
+Release-Date: [unreleased]
+Protocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns mqtt pop3 pop3s rtsp smb smbs smtp smtps telnet tftp
+Features: alt-svc AsynchDNS HSTS HTTP2 HTTP3 HTTPS-proxy IPv6 Largefile NTLM SSL threadsafe TLS-SRP UnixSockets
+（無事実行できるようになり、HTTP2, HTTP3が有効になっている）
+~~~
+※apt実行時に不要なパッケージが表示されることがある。メッセージの通り`sudo apt autoremove`で削除可能
 
 ### 作成したcurlコマンドの確認
 
+**❶ コマンドラインで`curl`を実行した際に、“どの”curlが動いているかを確認**
 
+- 今回`make install`でインストールしたcurlはデフォルトで`/usr/local/bin`にインストールされる（※curlの`./configure`実行時に`--prefix`で指定可能）
+- curlコマンドを`sudo apt install ～`でインストールしている場合、`/usr/bin`にインストールされる
+- 同名コマンドがある場合の優先順位は環境変数PATHやalias設定によって変わる（通常は`/usr/local/bin`の方が優先度が高い）
+- `which curl`でどこにある`curl`が実行されるか確認できる
+- 別のcurlが動いてしまう場合も、`/usr/local/bin/curl`のようにディレクトリ名を付ければ実行できる
 
+~~~
+which curl
+~~~
+
+~~~console
+$ which curl
+/usr/local/bin/curl  👈/usr/local/binのcurlが実行されることを確認
+~~~
+
+**❷ `curl --version`でcurlコマンドのバージョンとサポートしているプロトコルを確認**
+
+- HTTP3が入っていない場合は途中でエラーが出ていないか、`./configure`でオプションを指定できているか等を確認
+- ./configureをやり直した場合は、`make clean`を実行してから`make`と`sudo make install`を実行する
+- 仮想環境で試している場合はいったん変更を破棄して最初から入れ直すことができる
+
+~~~
+curl --version
+~~~
+
+~~~console
+$ curl --version  👈curlコマンドのバージョンを確認
+curl 8.8.0-DEV (x86_64-pc-linux-gnu) libcurl/8.8.0-DEV quictls/3.1.5 nghttp2/1.62.0-DEV ngtcp2/1.5.0-DEV nghttp3/1.3.0-DEV
+Release-Date: [unreleased]
+Protocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns mqtt pop3 pop3s rtsp smb smbs smtp smtps telnet tftp
+Features: alt-svc AsynchDNS HSTS HTTP2 HTTP3 HTTPS-proxy IPv6 Largefile NTLM SSL threadsafe TLS-SRP UnixSockets
+（無事実行できるようになり、HTTP2, HTTP3が有効になっている）
+~~~
+
+HTTP3が有効になっている場合は、--http3オプションが使用可能。
+**※筆者が執筆時にWSL環境で構築した`curl 8.6.0-DEV`は`--HTTP1.1`、`--HTTP2`、`--HTTP3`のように大文字でも指定できましたが（小文字も使用可能）、
+今回仮想環境で再構築した`curl 8.8.0-DEV`は下記実行例のように小文字で指定する必要がありました。**
+
+~~~
+$ curl -v --http3 https://www.example.com  👈HTTP/3で取得
+* Host www.example.com:443 was resolved.
+* IPv6: 2606:2800:21f:cb07:6820:80da:af6b:8b2c
+* IPv4: 93.184.215.14
+・・・
+* using HTTP/3
+* [HTTP/3] [0] OPENED stream for https://www.example.com/
+* [HTTP/3] [0] [:method: GET]
+* [HTTP/3] [0] [:scheme: https]
+* [HTTP/3] [0] [:authority: www.example.com]
+* [HTTP/3] [0] [:path: /]
+* [HTTP/3] [0] [user-agent: curl/8.8.0-DEV]
+* [HTTP/3] [0] [accept: */*]
+> GET / HTTP/3
+> Host: www.example.com
+> User-Agent: curl/8.8.0-DEV
+> Accept: */*
+> 
+* Request completely sent off
+* old SSL session ID is stale, removing
+< HTTP/3 200 
+< accept-ranges: bytes
+・・・
+~~~
 
 ----
 [TCP/IP＆ネットワークコマンド入門 サポートページ](https://nisim-m.github.io/tcpipcmdbook/)

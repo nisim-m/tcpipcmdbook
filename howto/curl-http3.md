@@ -20,17 +20,7 @@ ping www.example.com
 wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshark.exe" -ki - 2>NUL
 ~~~
 
-~~~bat
-echo "bat"
-ping www.example.com
-wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshark.exe" -ki - 2>NUL
-~~~
-
-~~~bash
-echo "bash"
-ping www.example.com
-wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshark.exe" -ki - 2>NUL
-~~~
+<code>wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshark.exe" -ki - 2>NUL</code>
 
 ~~~console
 $ echo "console"
@@ -46,16 +36,16 @@ $ sudo ip netns exec u2 tcpdump -nlUw - | wireshark.exe -ki - 2>/dev/NUL
 ~~~
 
 ~~~console
-# echo "console"
-# echo "console"
-% ping www.example.com
+>echo "console"
+>echo "console"
+>ping www.example.com
 PING www.example.com (93.184.216.34) 56(84) bytes of data.
 64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=1 ttl=53 time=110 ms
-u$ ping www.example.com > tmp.txt
-u$ ping www.example.com
+>ping www.example.com > tmp.txt
+>ping www.example.com
 PING www.example.com (93.184.216.34) 56(84) bytes of data.
 64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=4 ttl=53 time=109 ms
-$ sudo ip netns exec u2 tcpdump -nlUw - | wireshark.exe -ki - 2>/dev/NUL
+>wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshark.exe" -ki - 2>NUL
 ~~~
 
 ~~~terminal
@@ -70,7 +60,6 @@ PING www.example.com (93.184.216.34) 56(84) bytes of data.
 64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=4 ttl=53 time=109 ms
 >wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshark.exe" -ki - 2>NUL
 ~~~
-
 
 ----
 [TCP/IP＆ネットワークコマンド入門 サポートページ](https://nisim-m.github.io/tcpipcmdbook/)

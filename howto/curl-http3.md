@@ -51,7 +51,7 @@ $ cd work       ←workディレクトリに移る
 
 - まずは最新版で試してみて、ダメだったらドキュメントにあるバージョンを使用する
 
-<small>➡GitとGitHub、およびソースコードからの構築については開発「Linux＋コマンド入門」第5章「パッケージ管理 必要なモノを揃えられるようにしよう」の最後に取り上げているのでお持ちの方はご参照ください。ここで扱っている内容は“最初の1歩”なので、特に構築時の各コマンドやオプションの意味、なぜ必要なのかといった事柄については専門書をあたってください。Gitについては「Pro Git 2nd Edition」の日本語訳が <a href="https://git-scm.com/book/ja/v2">https://git-scm.com/book/ja/v2</a>でダウンロードできます。</small>
+<small>➡GitとGitHub、およびソースコードからの構築については姉妹本<a href="https://gihyo.jp/book/2021/978-4-297-12024-5">「Linux＋コマンド入門」</a>第5章「パッケージ管理 必要なモノを揃えられるようにしよう」の最後に取り上げているのでお持ちの方はご参照ください。ここで扱っている内容は“最初の1歩”なので、特に構築時の各コマンドやオプションの意味、なぜ必要なのかといった事柄については専門書をあたってください。Gitについては「Pro Git 2nd Edition」の日本語訳が <a href="https://git-scm.com/book/ja/v2">https://git-scm.com/book/ja/v2</a>でダウンロードできます。</small>
 
 ## 開発ツールをインストール
 
@@ -114,8 +114,51 @@ sudo make install
 cd ..
 ~~~
 
-<div class="codetitle">実行画面サンプル</div>
+<div class="codetitle">実行画面サンプル（ホームディレクトリ下のworkで実行）</div>
 ~~~console
+~/work$ git clone --depth 1 https://github.com/quictls/openssl
+Cloning into 'openssl'...
+remote: Enumerating objects: 24632, done.
+remote: Counting objects: 100% (24632/24632), done.
+remote: Compressing objects: 100% (19676/19676), done.
+remote: Total 24632 (delta 1913), reused 20916 (delta 1500), pack-reused 0
+Receiving objects: 100% (24632/24632), 22.32 MiB | 4.61 MiB/s, done.
+Resolving deltas: 100% (1913/1913), done.
+Updating files: 100% (24479/24479), done.
+~/work$                 （opensslディレクトリが生成されている）
+~/work$ cd openssl/     （opensslディレクトリへ移動）
+~/work/openssl$ ./config enable-tls1_3 --prefix=/opt/curl
+Configuring OpenSSL version 3.1.5+quic for target linux-x86_64
+Using os-specific seed configuration
+Created configdata.pm
+Running configdata.pm
+Created Makefile.in
+Created Makefile
+Created include/openssl/configuration.h
+
+**********************************************************************
+***                                                                ***
+***   OpenSSL has been successfully configured                     ***
+***                                                                ***
+***   If you encounter a problem while building, please open an    ***
+***   issue on GitHub <https://github.com/openssl/openssl/issues>  ***
+***   and include the output from the following command:           ***
+***                                                                ***
+***       perl configdata.pm --dump                                ***
+***                                                                ***
+***   (If you are new to OpenSSL, you might want to consult the    ***
+***   'Troubleshooting' section in the INSTALL.md file first)      ***
+***                                                                ***
+**********************************************************************
+~/work/openssl$ make
+/usr/bin/perl "-I." -Mconfigdata "util/dofile.pl" "-oMakefile" include/crypto/bn_conf.h.in > include/crypto/bn_conf.h
+/usr/bin/perl "-I." -Mconfigdata "util/dofile.pl" "-oMakefile" include/crypto/dso_conf.h.in > include/crypto/dso_conf.h
+・・・
+gcc  -I. -Iinclude -Iapps/include  -fPIC -pthread -m64 -Wa,--noexecstack -Wall -O3 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSLDIR="\"/opt/curl/ssl\"" -DENGINESDIR="\"/opt/curl/lib64/engines-81.3\"" -DMODULESDIR="\"/opt/curl/lib64/ossl-modules\"" -DOPENSSL_BUILDING_OPENSSL -DNDEBUG  -MMD -MF apps/lib/libapps-lib-app_libctx.d.tmp -MT apps/lib/libapps-lib-app_libctx.o -c -o apps/lib/libapps-lib-app_libctx.o apps/lib/app_libctx.c
+gcc  -I. -Iinclude -Iapps/include  -fPIC -pthread -m64 -Wa,--noexecstack -Wall -O3 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSLDIR="\"/opt/curl/ssl\"" -DENGINESDIR="\"/opt/curl/lib64/engines-81.3\"" -DMODULESDIR="\"/opt/curl/lib64/ossl-modules\"" -DOPENSSL_BUILDING_OPENSSL -DNDEBUG  -MMD -MF apps/lib/libapps-lib-app_params.d.tmp -MT apps/lib/libapps-lib-app_params.o -c -o apps/lib/libapps-lib-app_params.o apps/lib/app_params.c
+gcc  -I. -Iinclude -Iapps/include  -fPIC -pthread -m64 -Wa,--noexecstack -Wall -O3 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSLDIR="\"/opt/curl/ssl\"" -DENGINESDIR="\"/opt/curl/lib64/engines-81.3\"" -DMODULESDIR="\"/opt/curl/lib64/ossl-modules\"" -DOPENSSL_BUILDING_OPENSSL -DNDEBUG  -MMD -MF apps/lib/libapps-lib-app_provider.d.tmp -MT apps/lib/libapps-lib-app_provider.o -c -o apps/lib/libapps-lib-app_provider.o apps/lib/app_provider.c
+・・・
+
 ~~~
 
 ## nghttp2の取得と構築

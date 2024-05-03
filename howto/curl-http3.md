@@ -6,59 +6,16 @@
 
 <!-- /TOC -->
 
-2台目の仮想マシンのホスト名（コンピューターの名前）を変更します。仮想マシンを起動して以下のコマンドを実行してください。ここでは、ubuntu2という名前にしています。
-
-<code>sudo hostnamectl set-hostname ubuntu2</code>
-
-ゲストネットワーク： `10.0.2.0/24`
-DHCP割り当て開始アドレス： `10.0.2.1`
-DHCP割り当て終了アドレス： `10.0.2.254`
-
 ~~~
-echo ""
-ping www.example.com
-wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshark.exe" -ki - 2>NUL
-~~~
-
-<code>wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshark.exe" -ki - 2>NUL</code>
-
-~~~console
-$ echo "console"
-$ echo "console"
-$ ping www.example.com
-PING www.example.com (93.184.216.34) 56(84) bytes of data.
-64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=1 ttl=53 time=110 ms
-$ ping www.example.com > tmp.txt
-$ ping www.example.com
-PING www.example.com (93.184.216.34) 56(84) bytes of data.
-64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=4 ttl=53 time=109 ms
-$ sudo ip netns exec u2 tcpdump -nlUw - | wireshark.exe -ki - 2>/dev/NUL
+syntax用
 ~~~
 
 ~~~console
->echo "console"
->echo "console"
->ping www.example.com
-PING www.example.com (93.184.216.34) 56(84) bytes of data.
-64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=1 ttl=53 time=110 ms
->ping www.example.com > tmp.txt
->ping www.example.com
-PING www.example.com (93.184.216.34) 56(84) bytes of data.
-64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=4 ttl=53 time=109 ms
->wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshark.exe" -ki - 2>NUL
+$ Linuxプロンプト
 ~~~
 
 ~~~terminal
->echo "terminal"
->echo "terminal"
->ping www.example.com
-PING www.example.com (93.184.216.34) 56(84) bytes of data.
-64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=1 ttl=53 time=110 ms
->ping www.example.com > tmp.txt
->ping www.example.com
-PING www.example.com (93.184.216.34) 56(84) bytes of data.
-64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=4 ttl=53 time=109 ms
->wsl sudo ip netns exec u2 tcpdump -nlUw - | "c:\Program Files\Wireshark\Wireshark.exe" -ki - 2>NUL
+>Windowsプロンプト
 ~~~
 
 ----

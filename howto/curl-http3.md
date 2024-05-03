@@ -351,7 +351,8 @@ make[2]: 'install-exec-am' に対して行うべき事はありません.
  /usr/bin/install -c -m 644 README.rst '/opt/curl/share/doc/nghttp3'
 make[2]: ディレクトリ '/home/study/work/nghttp3' から出ます
 make[1]: ディレクトリ '/home/study/work/nghttp3' から出ます
-~/work/nghttp3$
+~/work/nghttp3$ cd ..
+~/work$
 ~~~
 
 ## ngtcp2の取得と構築
@@ -369,6 +370,85 @@ cd ..
 
 <div class="codetitle">実行画面サンプル（ホームディレクトリ下のworkで実行）</div>
 ~~~console
+~/work$ git clone --depth 1 https://github.com/ngtcp2/ngtcp2
+Cloning into 'ngtcp2'...
+remote: Enumerating objects: 435, done.
+remote: Counting objects: 100% (435/435), done.
+remote: Compressing objects: 100% (337/337), done.
+remote: Total 435 (delta 163), reused 192 (delta 65), pack-reused 0
+Receiving objects: 100% (435/435), 700.04 KiB | 3.38 MiB/s, done.
+Resolving deltas: 100% (163/163), done.
+~/work$ cd ngtcp2/
+~/work/ngtcp2$ autoreconf -fi
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+configure.ac:29: installing './compile'
+configure.ac:32: installing './config.guess'
+configure.ac:32: installing './config.sub'
+configure.ac:38: installing './install-sh'
+configure.ac:38: installing './missing'
+Makefile.am: installing './INSTALL'
+crypto/boringssl/Makefile.am: installing './depcomp'
+parallel-tests: installing './test-driver'
+~/work/ngtcp2$ 
+~/work/ngtcp2$ ./configure PKG_CONFIG_PATH=/opt/curl/lib64/pkgconfig:/opt/curl/lib64/pkgconfig LDFLAGS="-Wl,-rpath,/opt/curl/lib64" --prefix=/opt/curl --enable-lib-only
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+・・・
+
+    Libs:
+      OpenSSL:        yes (CFLAGS='-I/opt/curl/include' LIBS='-L/opt/curl/lib64 -lssl -lcrypto')
+      Libev:          no (CFLAGS='' LIBS='')
+      Libnghttp3:     no (CFLAGS='' LIBS='')
+      Jemalloc:       no (CFLAGS='' LIBS='')
+      GnuTLS:         no (CFLAGS='' LIBS='')
+      BoringSSL:      no (CFLAGS='' LIBS='')
+      Picotls:        no (CFLAGS='' LIBS='')
+      wolfSSL:        no (CFLAGS='' LIBS='')
+      Libbrotlienc:   no (CFLAGS="' LIBS='')
+      Libbrotlidec:   no (CFLAGS="' LIBS='')
+    Examples:         no
+
+~/work/ngtcp2$ 
+~/work/ngtcp2$ make
+make  all-recursive
+make[1]: ディレクトリ '/home/study/work/ngtcp2' に入ります
+Making all in lib
+make[2]: ディレクトリ '/home/study/work/ngtcp2/lib' に入ります
+Making all in includes
+・・・
+make[3]: 'all-am' に対して行うべき事はありません.
+make[3]: ディレクトリ '/home/study/work/ngtcp2/crypto' から出ます
+make[2]: ディレクトリ '/home/study/work/ngtcp2/crypto' から出ます
+make[2]: ディレクトリ '/home/study/work/ngtcp2' に入ります
+make[2]: ディレクトリ '/home/study/work/ngtcp2' から出ます
+make[1]: ディレクトリ '/home/study/work/ngtcp2' から出ます
+~/work/ngtcp2$ 
+~/work/ngtcp2$ sudo make install
+Making install in lib
+make[1]: ディレクトリ '/home/study/work/ngtcp2/lib' に入ります
+Making install in includes
+make[2]: ディレクトリ '/home/study/work/ngtcp2/lib/includes' に入ります
+make[3]: ディレクトリ '/home/study/work/ngtcp2/lib/includes' に入ります
+make[3]: 'install-exec-am' に対して行うべき事はありません.
+・・・
+
+make[2]: 'install-exec-am' に対して行うべき事はありません.
+ /usr/bin/mkdir -p '/opt/curl/share/doc/ngtcp2'
+ /usr/bin/install -c -m 644 README.rst '/opt/curl/share/doc/ngtcp2'
+make[2]: ディレクトリ '/home/study/work/ngtcp2' から出ます
+make[1]: ディレクトリ '/home/study/work/ngtcp2' から出ます
+~/work/ngtcp2$ 
+~/work/ngtcp2$ cd ..
+~/work$ 
 ~~~
 
 ## curlの取得と構築

@@ -7,7 +7,7 @@
 
 <!-- TOC -->
 1. [概要と方針](#概要と方針)
-   1. [git clone 実行時の方針](#git-clone-実行時の方針)
+   1. [git cloneの方針](#git-cloneの方針)
 2. [構築に必要なパッケージのインストール](#構築に必要なパッケージのインストール)
 3. [ディレクトリの準備](#ディレクトリの準備)
 4. [quictlsの取得と構築](#quictlsの取得と構築)
@@ -21,21 +21,23 @@
 
 ## 概要と方針
 
-<a href="https://github.com/curl/curl/blob/master/docs/HTTP3.md">「HTTP3 (and QUIC)」</a>、以下“ドキュメント”と呼ぶ）に従い構築する。
-URL: https://github.com/curl/curl/blob/master/docs/HTTP3.md
+<a href="https://github.com/curl/curl/blob/master/docs/HTTP3.md">「HTTP3 (and QUIC)」</a>、以下“ドキュメント”と呼ぶ）に従い構築する。<br />
+[URL: https://github.com/curl/curl/blob/master/docs/HTTP3.md](https://github.com/curl/curl/blob/master/docs/HTTP3.md)
 
 - ngtcp2版で構築
 - http2とhttp3を有効にしたい
 - ドキュメントの`--prefix`指定にある`<somewhere1～3>`は `/opt/curl` とする
 - 作業フォルダを作成しその中でソースを取得して構築、今回はホームディレクトリ下に`work`というディレクトリを作成して使用
 
-### git clone 実行時の方針
+### git cloneの方針
 
 `git clone プロジェクトのURL`でソースコードを取得して、ドキュメントに従って構築。
 
-ドキュメントでは`git clone --depth 1 -b ～ http://github.com/～`としている。`--depth 1`は履歴一つ分（＝最新版）のみ取得するオプション。`-b`はブランチを指定するオプションで、ドキュメントではバージョンを指定してる。
+ドキュメントでは`git clone --depth 1 -b ～ http://github.com/～`としている。`--depth 1`は履歴一つ分（＝最新版）のみ取得するオプション。
+`-b`はブランチを指定するオプションで、ブランチ名はプロジェクトによって異なるが、今回`git clone`の対象はブランチ名＝バージョンとなっており、
+ドキュメントではブランチを指定することで構築に使用するバージョンを示している。
 
-- まずは最新版で試してみて、ダメだったらドキュメントにあるバージョンを使用する
+- まずは最新版（`-b`指定無し）で試してみて、ダメだったらドキュメントにあるバージョンを使用する
 
 <small>➡GitとGitHub、およびソースコードからの構築については姉妹本<a href="https://gihyo.jp/book/2021/978-4-297-12024-5">「Linux＋コマンド入門」</a>第5章「パッケージ管理 必要なモノを揃えられるようにしよう」の最後に取り上げているのでお持ちの方はご参照ください。ここで扱っている内容は“最初の1歩”なので、特に構築時の各コマンドやオプションの意味、なぜ必要なのかといった事柄については専門書をあたってください。Gitについては「Pro Git 2nd Edition」の日本語訳が <a href="https://git-scm.com/book/ja/v2">https://git-scm.com/book/ja/v2</a>でダウンロードできます。</small>
 
@@ -614,8 +616,8 @@ make[4]: ディレクトリ '/home/study/work/curl/docs/libcurl' から出ます
 make[3]: ディレクトリ '/home/study/work/curl' から出ます
 make[2]: ディレクトリ '/home/study/work/curl' から出ます
 make[1]: ディレクトリ '/home/study/work/curl' から出ます
-study@ubuntu1:~/work/curl$ cd .. 👈workディレクトリに戻る
-study@ubuntu1:~/work$ 
+~/work/curl$ cd .. 👈workディレクトリに戻る
+~/work$ 
 ~~~
 
 ### libcurl4のアンインストール

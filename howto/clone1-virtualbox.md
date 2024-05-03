@@ -113,7 +113,7 @@ IPv6デフォルトルートのアドバタイズ: `✓`有効
 
 なお、プロンプト（本文参照）は端末を開き直すことで反映されます。
 
-<div class="imgtitle">クローンで作成した仮想マシン（Ubuntu 2）を起動して端末で`sudo hostnamectl set-hostname ubuntu2`を実行</div>
+<div class="imgtitle">クローンで作成した仮想マシン（Ubuntu 2）を起動して端末で<code>sudo hostnamectl set-hostname ubuntu2</code>を実行</div>
 <a href="images/2024-04-28-07-51-16.png"><img src="images/2024-04-28-07-51-16.png" width="400"/></a>
 
 <div class="imgtitle">プロンプトに表示されているホスト名は端末を開き直すと反映される</div>

@@ -2,6 +2,7 @@
 [TCP/IP＆ネットワークコマンド入門 サポートページ](https://nisim-m.github.io/tcpipcmdbook/) ～補足事項～
 # HTTP3に対応したcurlコマンド
 
+「4.4 HTTP/HTTPSの通信を見てみよう」内「参考：curlによるHTTP/3通信」（本文p.221）用
 構築方法の解説は本書の範囲を超えるため、手順紹介のみ行っています。
 
 <!-- TOC -->
@@ -158,7 +159,27 @@ gcc  -I. -Iinclude -Iapps/include  -fPIC -pthread -m64 -Wa,--noexecstack -Wall -
 gcc  -I. -Iinclude -Iapps/include  -fPIC -pthread -m64 -Wa,--noexecstack -Wall -O3 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSLDIR="\"/opt/curl/ssl\"" -DENGINESDIR="\"/opt/curl/lib64/engines-81.3\"" -DMODULESDIR="\"/opt/curl/lib64/ossl-modules\"" -DOPENSSL_BUILDING_OPENSSL -DNDEBUG  -MMD -MF apps/lib/libapps-lib-app_params.d.tmp -MT apps/lib/libapps-lib-app_params.o -c -o apps/lib/libapps-lib-app_params.o apps/lib/app_params.c
 gcc  -I. -Iinclude -Iapps/include  -fPIC -pthread -m64 -Wa,--noexecstack -Wall -O3 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSLDIR="\"/opt/curl/ssl\"" -DENGINESDIR="\"/opt/curl/lib64/engines-81.3\"" -DMODULESDIR="\"/opt/curl/lib64/ossl-modules\"" -DOPENSSL_BUILDING_OPENSSL -DNDEBUG  -MMD -MF apps/lib/libapps-lib-app_provider.d.tmp -MT apps/lib/libapps-lib-app_provider.o -c -o apps/lib/libapps-lib-app_provider.o apps/lib/app_provider.c
 ・・・
-
+/usr/bin/perl "-I." -Mconfigdata "util/dofile.pl" \
+    "-oMakefile" util/wrap.pl.in > "util/wrap.pl"
+chmod a+x util/wrap.pl
+make[1]: Leaving directory '/home/study/work/openssl'
+~/work/openssl$ （"syntax error"や"fatal error"、"～はありません"などのエラーメッセージが出ていなければOK）
+~/work/openssl$ sudo make install
+[sudo] study のパスワード:  👈パスワードを入力してEnter
+make depend && make _build_libs
+make[1]: Entering directory '/home/study/work/openssl'
+make[1]: Leaving directory '/home/study/work/openssl'
+make[1]: Entering directory '/home/study/work/openssl'
+make[1]: Leaving directory '/home/study/work/openssl'
+created directory `/opt/curl/lib64'
+*** Installing runtime libraries
+・・・
+install doc/html/man7/proxy-certificates.html -> /opt/curl/share/doc/openssl/html/man7/proxy-certificates.html
+install doc/html/man7/ssl.html -> /opt/curl/share/doc/openssl/html/man7/ssl.html
+install doc/html/man7/x509.html -> /opt/curl/share/doc/openssl/html/man7/x509.html
+~/work/openssl$         （エラーメッセージが出ていなければOK）
+~/work/openssl$ cd ..   （workディレクトリに戻る、「..」は親ディレクトリを表す記号）
+~/work$
 ~~~
 
 ## nghttp2の取得と構築

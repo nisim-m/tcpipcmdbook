@@ -18,17 +18,33 @@ hr {
   height:1px
 }
 
-.b, .language-console highlight, .language-terminal highlight {
+.b,
+.language-console .highlight,
+.language-console code,
+.language-terminal .highlight,
+.language-terminal code {
   color: #F2F2F2;
-  background:#0C0C0C;
+  background: #0C0C0C;
 }
 
-.g, .g1 {
+.language-console .gp {
+  color: lightgreen;
+}
+
+.language-terminal .gp {
+  color: dimgray
+}
+
+.highlight code .nb {
+  color: inherit
+}
+
+.g,.g1 {
   color: #F2F2F2;
-  background:#727272;
+  background: #727272;
 }
 
 .g2 {
   color: #CCCCCC;
-  background:#000000;
+  background: #000000;
 }

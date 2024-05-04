@@ -29,8 +29,8 @@ hr {
 .b,
 .language-console .highlight,
 .language-console code,
-.language-terminal .highlight,
-.language-terminal code {
+.language-bash .highlight,
+.language-bash code {
   color: #F2F2F2;
   background: #0C0C0C;
 }
@@ -39,7 +39,7 @@ hr {
   color: lightgreen;
 }
 
-.language-terminal .gp {
+.language-bash .gp {
   color: dimgray
 }
 

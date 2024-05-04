@@ -24,7 +24,7 @@
 ### 補足事項
 
 [HTTP/3に対応したcurlコマンドの構築](howto/curl-http3.md)<br/>
-※「4.4 HTTP/HTTPSの通信を見てみよう」内「参考：curlによるHTTP/3通信」で使用
+<small>※「4.4 HTTP/HTTPSの通信を見てみよう」内「参考：curlによるHTTP/3通信」で使用</small>
 
 ## 正誤表
 

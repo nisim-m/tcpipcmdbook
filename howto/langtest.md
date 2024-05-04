@@ -19,7 +19,7 @@ curl: symbol lookup error: curl: undefined symbol: curl_easy_header
 $ ldd /usr/local/bin/curl | grep curl
 	libcurl.so.4 => /lib/x86_64-linux-gnu/libcurl.so.4 (0x000071c82024e000)
 $ ldd /usr/local/bin/curl | grep curl
-	libcurl.so.4 =&gt; /lib/x86_64-linux-gnu/libcurl.so.4 (0x000071c82024e000)
+	libcurl.so.4 =\> /lib/x86_64-linux-gnu/libcurl.so.4 (0x000071c82024e000)
 （今回作成した/usr/local/lib/libcurl.so.4とは異なるファイルを参照している？！）
 $ sudo apt remove libcurl4 👈libcurl4パッケージを削除
 パッケージリストを読み込んでいます... 完了

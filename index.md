@@ -30,14 +30,20 @@
 
 |ページ|内容|
 |-|-|
+|1.5 (p.76)|誤：「Enable IPv6」にチェックマーク 正「IPv6を有効化」にチェックマーク<br/><small>（※VirtualBoxバージョンによって変更される可能性があるので画面に従ってください）</small>|
 |2.5 (p.122)<br/>図C|ICMPヘッダー 誤: 16バイト 正: 8バイト<br/>正: ❸ICMPヘッダーのタイムスタンプを削除<br/>（👉<a href="images/img1715741896.png"><img src="images/img1715741896.png" height="30"></a>）|
 |2.6 (p.128)<br/>図B|誤<br/>10.0.2.15から10.0.2.4へのpingには応答がない<br/>10.0.2.4から10.0.2.15へのpingには応答がある<br/>正<br/>10.0.2.4から10.0.2.15へのpingには応答がない<br/>10.0.2.15から10.0.2.4へのpingには応答がある|
+|2.7 (p.130)|誤：「Enable IPv6」にチェックマーク 正「IPv6を有効化」にチェックマーク|
+|4.4 (p.215)|2つめの実行画面内、4行目GETの行で末尾の「1」が欠けていました。正：GET / HTTP/1.<strong>1</strong>|
+|4.10 (p.263)<br/>図A|右下Ubuntu3相当のNetwork Namespaceの記載がu2になっていますが正しくはu3、デバイスはveth-u<strong>3</strong>、IPアドレスは10.0.<strong>3</strong>.4です（👉<a href="images/img1716186000.png"><img src="images/img1716186000.png" height="30"></a>）|
+|4.10 (p.264)|誤：u3用のveth-u2、veth-gw3というペア 正：u3用のveth-u<strong>3</strong>、veth-gw3というペア|
 
 
 ## 履歴
 
 - 2024.5 サポートページ公開
 - 2024.5.15 正誤表追加（2.5 図C、2.6 図B）
+- 2024.5.20 正誤表追加（1.5、2.7、4.4、4.10 図A、4.10本文）
 
 ----
 [TCP/IP＆ネットワークコマンド入門 サポートページ](https://nisim-m.github.io/tcpipcmdbook/)

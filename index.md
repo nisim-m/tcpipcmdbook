@@ -36,7 +36,7 @@
 |2.7 (p.130)|誤：「Enable IPv6」にチェックマーク 正「IPv6を有効化」にチェックマーク|
 |4.4 (p.215)|2つめの実行画面内、4行目GETの行で末尾の「1」が欠けていました。正：GET / HTTP/1.<strong>1</strong>|
 |4.10 (p.263)<br/>図A|右下Ubuntu3相当のNetwork Namespaceの記載がu2になっていますが正しくはu3、デバイスはveth-u<strong>3</strong>、IPアドレスは10.0.<strong>3</strong>.4です（👉<a href="images/img1716186000.png"><img src="images/img1716186000.png" height="30"></a>）|
-|4.10 (p.264)|誤：u3用のveth-u2、veth-gw3というペア 正：u3用のveth-u<strong>3</strong>、veth-gw3というペア|
+|4.10 (p.264)|誤：u3用のveth-u2、veth-gw3というペア<br/>正：u3用のveth-u<strong>3</strong>、veth-gw3というペア|
 
 
 ## 履歴

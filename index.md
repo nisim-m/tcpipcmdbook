@@ -32,7 +32,7 @@
 |-|-|
 |0.10（p.48）<br/>図Ｆ|実行結果の検索(Windows Terminal) 誤：Ctrl+Shift+S 正：Ctrl+Shift+<b>F</b>（👉<a href="images/img1717927381.png"><img src="images/img1717927381.png" height="30"></a>）|
 |1.2 (p.67)|ifconfigコマンドのUbuntu環境へのインストールについて<br/>誤：sudo apt install inet-tools 正：sudo apt install <strong>net-tools</strong>|
-|1.5 (p.76)|誤：「Enable IPv6」にチェックマーク 正「IPv6を有効化」にチェックマーク<br/><small>（※VirtualBoxバージョンによって変更される可能性があるので画面に従ってください）</small>|
+|1.5 (p.76)|誤：「Enable IPv6」にチェックマーク 正：「IPv6を有効化」にチェックマーク<br/><small>（※VirtualBoxバージョンによって変更される可能性があるので画面に従ってください）</small>|
 |2.5 (p.122)<br/>図C|ICMPヘッダー 誤: 16バイト 正: 8バイト<br/>正: ❸ICMPヘッダーのタイムスタンプを削除<br/>（👉<a href="images/img1715741896.png"><img src="images/img1715741896.png" height="30"></a>）|
 |2.6 (p.128)<br/>図B|誤<br/>10.0.2.15から10.0.2.4へのpingには応答がない<br/>10.0.2.4から10.0.2.15へのpingには応答がある<br/>正<br/>10.0.2.4から10.0.2.15へのpingには応答がない<br/>10.0.2.15から10.0.2.4へのpingには応答がある|
 |2.7 (p.130)|誤：「Enable IPv6」にチェックマーク 正「IPv6を有効化」にチェックマーク|

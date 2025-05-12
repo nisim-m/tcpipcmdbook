@@ -4,7 +4,7 @@
 
 本書で使用している Ubuntu 22.04.LTS Desktop のARM版は、現在、上記URLからはダウンロードできません。
 2025-5-12現在、Onlime SL Limited（シエアレオネの通信事業者）のミラーサイトからDL可能です。
-[https://cdimage.ubuntu.mirror.onlime.sl/ubuntu/daily-live/current/]()
+[https://cdimage.ubuntu.mirror.onlime.sl/ubuntu/daily-live/20220417/]()
 
 cdimage.ubuntu.com では以下のバージョンがダウンロードできます。
 

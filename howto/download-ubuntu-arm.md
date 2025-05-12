@@ -31,7 +31,7 @@ https://cdimage.ubuntu.com/daily-live/current/
 
 ![参考](images/2024-04-21-12-52-42.png)
 
-👈[UbuntuのISOイメージに戻る](install-utm.html#ISO)
+👈[UbuntuのISOイメージに戻る](install-utm.html#ubuntuのisoイメージ)
 
 ----
 [TCP/IP＆ネットワークコマンド入門 サポートページ](https://nisim-m.github.io/tcpipcmdbook/)

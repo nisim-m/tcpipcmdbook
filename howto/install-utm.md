@@ -33,9 +33,42 @@ UTMは[https://mac.getutm.app/](https://mac.getutm.app/) で公開されてい�
 
 ### UbuntuのISOイメージ
 
-**ARM版**Ubuntuのインストール用イメージファイルは [https://cdimage.ubuntu.com/jammy/daily-live/current/](https://cdimage.ubuntu.com/jammy/daily-live/current/) からダウンロードできます。**ARM**と書かれている方を選択してください。本書では、`jammy-desktop-arm64.iso`を使用しています。
+**ARM版**Ubuntuのインストール用イメージファイルは [<del>https://cdimage.ubuntu.com/jammy/daily-live/current/</del>](https://cdimage.ubuntu.com/jammy/daily-live/current/) からダウンロードできます。**ARM**と書かれている方を選択してください。本書では、`jammy-desktop-arm64.iso`を使用しています。
 
-![](images/2024-04-21-12-52-42.png)
+本書で使用している Ubuntu 22.04.LTS Desktop のARM版は、現在、上記URLからはダウンロードできません。
+
+2025-5-12現在、Onlime SL Limited（シエアレオネの通信事業者）のミラーサイトからDL可能です。
+
+<details>
+<summary>👇ARM版Ubuntu DesktopのダウンロードURL</summary>
+
+[https://cdimage.ubuntu.mirror.onlime.sl/ubuntu/daily-live/current/]()
+
+cdimage.ubuntu.com では以下のバージョンがダウンロードできます。
+
+#### Ubuntu 24.04.2 (Noble Numbat) Daily Build
+[https://cdimage.ubuntu.com/noble/daily-live/current/](https://cdimage.ubuntu.com/noble/daily-live/current/)
+（2025-5-12現在 [noble-desktop-arm64.iso](https://cdimage.ubuntu.com/noble/daily-live/current/noble-desktop-arm64.iso)がDL可能）
+
+#### Ubuntu 25.10 (Questing Quokka) Daily Build
+https://cdimage.ubuntu.com/daily-live/current/
+（2025-5-12現在 [questing-desktop-arm64.iso](https://cdimage.ubuntu.com/daily-live/current/questing-desktop-arm64.iso)がDL可能）
+
+#### Ubuntuのリリースナンバー
+[https://wiki.ubuntu.com/Releases](https://wiki.ubuntu.com/Releases)
+| コードネーム | バージョン番号   | リリース時期 |
+| --- | --- | --- |
+| Jammy Jellyfish | 22.04 LTS | 2022年4月 |
+| Noble Numbat    | 24.04 LTS | 2024年4月 |
+| Questing Quokka | 25.10 | 2025年10月(予定) |
+
+※LTS版は長期サポート版（long-term support、リリースから5年間メンテナンスされる）
+
+下記画像を参考に、ARM desktop imageとあるものを探してダウンロードしてください。
+※ネットワークのテストという意味ではServer版で問題ありませんが、本書では、初学者向けに、仮想マシンを操作していることがわかりやすいデスクトップ版を使用しています。
+
+![参考](images/2024-04-21-12-52-42.png)
+</details>
 
 ## UTMのインストールと起動
 

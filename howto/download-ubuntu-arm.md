@@ -18,11 +18,11 @@ https://cdimage.ubuntu.com/daily-live/current/
 
 #### Ubuntuのリリースナンバー
 [https://wiki.ubuntu.com/Releases](https://wiki.ubuntu.com/Releases)
-| コードネーム | バージョン番号   | リリース時期 |
-| --- | --- | --- |
-| Jammy Jellyfish | 22.04 LTS | 2022年4月 |
-| Noble Numbat    | 24.04 LTS | 2024年4月 |
-| Questing Quokka | 25.10 | 2025年10月(予定) |
+|コードネーム|バージョン番号|リリース時期|
+|-|-|-|
+|Jammy Jellyfish | 22.04 LTS | 2022年4月 |
+|Noble Numbat    | 24.04 LTS | 2024年4月 |
+|Questing Quokka | 25.10 | 2025年10月(予定) |
 
 ※LTS版は長期サポート版（long-term support、リリースから5年間メンテナンスされる）
 

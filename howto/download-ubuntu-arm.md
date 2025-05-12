@@ -4,7 +4,7 @@
 
 本書で使用している Ubuntu 22.04.LTS Desktop のARM版は、現在、上記URLからはダウンロードできません。
 2025-5-12現在、Onlime SL Limited（シエアレオネの通信事業者）のミラーサイトからDL可能です。
-[https://cdimage.ubuntu.mirror.onlime.sl/ubuntu/daily-live/20220417/]()
+[https://cdimage.ubuntu.mirror.onlime.sl/ubuntu/daily-live/current/](https://cdimage.ubuntu.mirror.onlime.sl/ubuntu/daily-live/current/)
 
 cdimage.ubuntu.com では以下のバージョンがダウンロードできます。
 
@@ -13,7 +13,7 @@ cdimage.ubuntu.com では以下のバージョンがダウンロードできま�
 （2025-5-12現在 [noble-desktop-arm64.iso](https://cdimage.ubuntu.com/noble/daily-live/current/noble-desktop-arm64.iso)がDL可能）
 
 #### Ubuntu 25.10 (Questing Quokka) Daily Build
-https://cdimage.ubuntu.com/daily-live/current/
+[https://cdimage.ubuntu.com/daily-live/current/](https://cdimage.ubuntu.com/daily-live/current/)
 （2025-5-12現在 [questing-desktop-arm64.iso](https://cdimage.ubuntu.com/daily-live/current/questing-desktop-arm64.iso)がDL可能）
 
 #### Ubuntuのリリースナンバー

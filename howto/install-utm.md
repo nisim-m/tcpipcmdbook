@@ -31,7 +31,7 @@ macOS環境では、UTMと**ARM版**Ubuntuで学習環境を作成できます�
 
 UTMは[https://mac.getutm.app/](https://mac.getutm.app/) で公開されています。無償版はDownloadボタンでダウンロードできます。違いはApp Storeで自動更新されるかどうかのみで機能は同じです（<a href="https://mac.getutm.app/#:~:text=difference">サイトの説明</a>より）。
 
-### <a name="ISO">UbuntuのISOイメージ</a>
+### UbuntuのISOイメージ
 
 **ARM版**Ubuntuのインストール用イメージファイルは [<del>https://cdimage.ubuntu.com/jammy/daily-live/current/</del>](https://cdimage.ubuntu.com/jammy/daily-live/current/) からダウンロードできます。**ARM**と書かれている方を選択してください。本書では、`jammy-desktop-arm64.iso`を使用しています。
 

@@ -49,6 +49,7 @@
 - 2024.6.9 正誤表追加（0.10 図F）
 - 2024.6.19 正誤表追加（1.2）
 - 2024.10.3 正誤表追加（3.3）
+- 2025.5.13 [ARM版Ubuntu DesktopのISOイメージダウンロードURL](https://nisim-m.github.io/tcpipcmdbook/howto/download-ubuntu-arm.html)について追記
 
 ----
 [TCP/IP＆ネットワークコマンド入門 サポートページ](https://nisim-m.github.io/tcpipcmdbook/)

@@ -12,9 +12,9 @@ cdimage.ubuntu.com では以下のバージョンがダウンロードできま�
 [https://cdimage.ubuntu.com/noble/daily-live/current/](https://cdimage.ubuntu.com/noble/daily-live/current/)
 （2025-5-12現在 [noble-desktop-arm64.iso](https://cdimage.ubuntu.com/noble/daily-live/current/noble-desktop-arm64.iso)がDL可能）
 
-#### Ubuntu 25.10 (Questing Quokka) Daily Build
+#### 最新版（開発版含む） Daily Build
 [https://cdimage.ubuntu.com/daily-live/current/](https://cdimage.ubuntu.com/daily-live/current/)
-（2025-5-12現在 [questing-desktop-arm64.iso](https://cdimage.ubuntu.com/daily-live/current/questing-desktop-arm64.iso)がDL可能）
+（2025-5-12現在は Ubuntu 25.10 (Questing Quokka)  [questing-desktop-arm64.iso](https://cdimage.ubuntu.com/daily-live/current/questing-desktop-arm64.iso)がDL可能）
 
 #### Ubuntuのリリースナンバー
 [https://wiki.ubuntu.com/Releases](https://wiki.ubuntu.com/Releases)

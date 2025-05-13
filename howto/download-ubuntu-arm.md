@@ -18,6 +18,7 @@ cdimage.ubuntu.com では以下のバージョンがダウンロードできま�
 
 #### Ubuntuのリリースナンバー
 [https://wiki.ubuntu.com/Releases](https://wiki.ubuntu.com/Releases)
+
 |コードネーム|バージョン番号|リリース時期|
 |-|-|-|
 |Jammy Jellyfish | 22.04 LTS | 2022年4月 |

@@ -31,15 +31,15 @@
 |ページ|内容|
 |-|-|
 |1.7（p.91）|誤：ICMPv2プロトコル 正：ICMPv**6**プロトコル</br><small>（他ページの記載が正しいです）</small>|
-|1.8（p.94）|右上の吹き出し 誤：Pヘッダ 正：IPヘッダ（👉<a href="images/img1728028436.png"><img src="images/img1728028436.png" height="30"></a>）||3.2（p.168）|コマンド書式内 誤：nc -zw 正：nc -z**v**</br><small>（本文の記載が正しいです）</small>|
-|3.2（p.170、172）|実行例内のu2側はnc -lの「-l」が不要</br><small>（p.169の記載が正しいです）</small>|
+|1.8（p.94）</br>図B|右上の吹き出し 誤：Pヘッダ 正：IPヘッダ（👉<a href="images/img1728028436.png"><img src="images/img1728028436.png" height="30"></a>）||3.2（p.168）|コマンド書式内 誤：nc -zw 正：nc -z**v**</br><small>（本文の記載が正しいです）</small>|
+|<span class="no-wrap">3.2（p.170、172）</span>|実行例内のu2側はnc -lの「-l」が不要</br><small>（p.169の記載が正しいです）</small>|
 |4.5（p.230）|Base64「大文字・小文字のアルファベットと2つの記号（+、/）という64種類」→「大文字・小文字のアルファベットと**数字及び**2つの記号（+、/）という64種類」|
 |4.8（p.239）|誤：SSHとTSL 正：SSHと**TLS**</br><small>（他ページの記載が正しいです）</small>|
 
 <small><b>（以下、第2刷以降、修正反映済み）</b></small>
 |ページ|内容|
 |-|-|
-|0.10（p.48）<br/>図F|実行結果の検索(Windows Terminal) 誤：Ctrl+Shift+S 正：Ctrl+Shift+<b>F</b>（👉<a href="images/img1717927381.png"><img src="images/img1717927381.png" height="30"></a>）|
+|<span class="no-wrap">0.10（p.48）</span><br/>図F|実行結果の検索(Windows Terminal) 誤：Ctrl+Shift+S 正：Ctrl+Shift+<b>F</b>（👉<a href="images/img1717927381.png"><img src="images/img1717927381.png" height="30"></a>）|
 |1.2 (p.67)|ifconfigコマンドのUbuntu環境へのインストールについて<br/>誤：sudo apt install inet-tools 正：sudo apt install <strong>net-tools</strong>|
 |1.5 (p.76)|誤：「Enable IPv6」にチェックマーク 正：「IPv6を有効化」にチェックマーク<br/><small>（※VirtualBoxバージョンによって変更される可能性があるので画面に従ってください）</small>|
 |2.5 (p.122)<br/>図C|ICMPヘッダー 誤: 16バイト 正: 8バイト<br/>正: ❸ICMPヘッダーのタイムスタンプを削除<br/>（👉<a href="images/img1715741896.png"><img src="images/img1715741896.png" height="30"></a>）|
@@ -59,6 +59,7 @@
 - 2024.6.19 正誤表追加（1.2）
 - 2024.10.3 正誤表追加（3.3）
 - 2025.5.13 [ARM版Ubuntu DesktopのISOイメージダウンロードURL](https://nisim-m.github.io/tcpipcmdbook/howto/download-ubuntu-arm.html)について追記
+- 2026.1.19 正誤表追加（1.7、1.8図B、3.2、4.5、4.8）
 
 ----
 [TCP/IP＆ネットワークコマンド入門 サポートページ](https://nisim-m.github.io/tcpipcmdbook/)

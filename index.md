@@ -37,6 +37,7 @@
 |4.8（p.239）|誤：SSHとTSL 正：SSHと**TLS**</br><small>（他ページの記載が正しいです）</small>|
 
 <small><b>（以下、第2刷以降、修正反映済み）</b></small>
+
 |ページ|内容|
 |-|-|
 |<span class="no-wrap">0.10（p.48）</span><br/>図F|実行結果の検索(Windows Terminal) 誤：Ctrl+Shift+S 正：Ctrl+Shift+<b>F</b>（👉<a href="images/img1717927381.png"><img src="images/img1717927381.png" height="30"></a>）|

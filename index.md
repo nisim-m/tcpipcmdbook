@@ -30,9 +30,10 @@
 
 |ページ|内容|
 |-|-|
-|1.7（p.91）|誤：ICMPv2プロトコル 正：ICMPv**6**プロトコル</br>他ページの記載が正しいです|
+|1.7（p.91）|誤：ICMPv2プロトコル 正：ICMPv**6**プロトコル</br><small>他ページの記載が正しいです</small>|
+|1.8（p.94）|右上の吹き出し 誤：Pヘッダ 正：IPヘッダ（👉<a href="images/img1728028436.png"><img src="images/img1728028436.png" height="30"></a>）|
 
-（以下、第2刷以降、修正反映済み）
+<small><b>（以下、第2刷以降、修正反映済み）</b></small>
 |ページ|内容|
 |-|-|
 |0.10（p.48）<br/>図F|実行結果の検索(Windows Terminal) 誤：Ctrl+Shift+S 正：Ctrl+Shift+<b>F</b>（👉<a href="images/img1717927381.png"><img src="images/img1717927381.png" height="30"></a>）|
